@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="首先，微信小程序开发工具是用nw.js实现的，nw.js  (直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。">
+<meta name="description" content="首先，微信小程序开发工具是用nw.js实现的，nw.js(直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。">
 <meta name="keywords" content="wechat_game">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序开发工具 linux 运行">
 <meta property="og:url" content="https://ryanluoxu.github.io/2018/01/14/wechat_game/prepare/index.html">
 <meta property="og:site_name" content="kk">
-<meta property="og:description" content="首先，微信小程序开发工具是用nw.js实现的，nw.js  (直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。">
+<meta property="og:description" content="首先，微信小程序开发工具是用nw.js实现的，nw.js(直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-14T11:36:07.000Z">
+<meta property="og:updated_time" content="2018-01-14T12:17:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序开发工具 linux 运行">
-<meta name="twitter:description" content="首先，微信小程序开发工具是用nw.js实现的，nw.js  (直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。">
+<meta name="twitter:description" content="首先，微信小程序开发工具是用nw.js实现的，nw.js(直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。">
 
 
 
@@ -407,11 +407,11 @@
       
 
       
-        <p>首先，微信小程序开发工具是用nw.js实现的，<a href="https://nwjs.io/" target="_blank" rel="noopener">nw.js</a>  (直接从DOM中调用所有的Node.js模块)本身是跨平台的，但是微信只出了开发工具的windows和mac版。下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。<br><a id="more"></a></p>
-<h3 id="1-nw"><a href="#1-nw" class="headerlink" title="1. nw"></a>1. nw</h3><p>下载nwjs sdk（需要devtool的支援） 压缩包之后解压;</p>
-<h3 id="2-设置-path-变量；"><a href="#2-设置-path-变量；" class="headerlink" title="2. 设置 path 变量；"></a>2. 设置 path 变量；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.bashrc # 视个人情况选择文件</span><br><span class="line"># 加入步骤一中解压目录， </span><br><span class="line"># 例如： export PATH=&quot;$PATH:/home/kk/Downloads/nwjs-sdk-v0.27.4-linux-x64&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="3-package-nw"><a href="#3-package-nw" class="headerlink" title="3. package.nw"></a>3. package.nw</h3><p>在 windows 机器安装开发工具， 找到安装目录，将 package.nw 文件夹拷入 ubuntu 系统；</p>
-<h3 id="4-运行："><a href="#4-运行：" class="headerlink" title="4. 运行："></a>4. 运行：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd package.nw</span><br><span class="line">$ nw .</span><br></pre></td></tr></table></figure>
+        <p>首先，微信小程序开发工具是用nw.js实现的，<a href="https://nwjs.io/" target="_blank" rel="noopener">nw.js</a>(直接从DOM中调用所有的Node.js模块)<br>本身是跨平台的，但是微信只出了开发工具的windows和mac版。<br>下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。<br><a id="more"></a></p>
+<h3 id="1-nw"><a href="#1-nw" class="headerlink" title="1.nw"></a>1.nw</h3><p>下载nwjs sdk（需要devtool的支援） 压缩包之后解压;</p>
+<h3 id="2-设置-path-变量；"><a href="#2-设置-path-变量；" class="headerlink" title="2.设置 path 变量；"></a>2.设置 path 变量；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.bashrc # 视个人情况选择文件</span><br><span class="line"># 加入步骤一中解压目录， </span><br><span class="line"># 例如： export PATH=&quot;$PATH:/home/kk/Downloads/nwjs-sdk-v0.27.4-linux-x64&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="3-package-nw"><a href="#3-package-nw" class="headerlink" title="3.package.nw"></a>3.package.nw</h3><p>在 windows 机器安装开发工具， 找到安装目录，将 package.nw 文件夹拷入 ubuntu 系统；</p>
+<h3 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行"></a>4.运行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd package.nw</span><br><span class="line">$ nw .</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -441,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/14/wechat_game/目录结构/" rel="next" title="微信小游戏目录结构">
-                <i class="fa fa-chevron-left"></i> 微信小游戏目录结构
+              <a href="/2017/12/23/hexo-next/" rel="next" title="hexo-next">
+                <i class="fa fa-chevron-left"></i> hexo-next
               </a>
             
           </div>
@@ -450,6 +450,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/14/wechat_game/dir-structure-md/" rel="prev" title="微信小游戏目录结构">
+                微信小游戏目录结构 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -602,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-nw"><span class="nav-number">1.</span> <span class="nav-text"><a href="#1-nw" class="headerlink" title="1. nw"></a>1. nw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置-path-变量；"><span class="nav-number">2.</span> <span class="nav-text"><a href="#2-&#x8BBE;&#x7F6E;-path-&#x53D8;&#x91CF;&#xFF1B;" class="headerlink" title="2. &#x8BBE;&#x7F6E; path &#x53D8;&#x91CF;&#xFF1B;"></a>2. &#x8BBE;&#x7F6E; path &#x53D8;&#x91CF;&#xFF1B;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-package-nw"><span class="nav-number">3.</span> <span class="nav-text"><a href="#3-package-nw" class="headerlink" title="3. package.nw"></a>3. package.nw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-运行："><span class="nav-number">4.</span> <span class="nav-text"><a href="#4-&#x8FD0;&#x884C;&#xFF1A;" class="headerlink" title="4. &#x8FD0;&#x884C;&#xFF1A;"></a>4. &#x8FD0;&#x884C;&#xFF1A;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-nw"><span class="nav-number">1.</span> <span class="nav-text"><a href="#1-nw" class="headerlink" title="1.nw"></a>1.nw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置-path-变量；"><span class="nav-number">2.</span> <span class="nav-text"><a href="#2-&#x8BBE;&#x7F6E;-path-&#x53D8;&#x91CF;&#xFF1B;" class="headerlink" title="2.&#x8BBE;&#x7F6E; path &#x53D8;&#x91CF;&#xFF1B;"></a>2.&#x8BBE;&#x7F6E; path &#x53D8;&#x91CF;&#xFF1B;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-package-nw"><span class="nav-number">3.</span> <span class="nav-text"><a href="#3-package-nw" class="headerlink" title="3.package.nw"></a>3.package.nw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-运行"><span class="nav-number">4.</span> <span class="nav-text"><a href="#4-&#x8FD0;&#x884C;" class="headerlink" title="4.&#x8FD0;&#x884C;"></a>4.&#x8FD0;&#x884C;</span></a></li></ol></div>
             
 
           </div>
