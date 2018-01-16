@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="kk">
 <meta property="og:description" content="Helm 是 Kubernetes 的一个包管理工具，用来简化 Kubernetes 应用的部署和管理。可以把 Helm 比作 CentOS 的 yum 工具， 而我们的服务可以看作是 rpm 包。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-16T13:35:41.000Z">
+<meta property="og:updated_time" content="2018-01-16T13:44:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="helm -- kubernets 的包管理工具">
 <meta name="twitter:description" content="Helm 是 Kubernetes 的一个包管理工具，用来简化 Kubernetes 应用的部署和管理。可以把 Helm 比作 CentOS 的 yum 工具， 而我们的服务可以看作是 rpm 包。">
@@ -419,6 +419,7 @@
 <h4 id="5-2-安装"><a href="#5-2-安装" class="headerlink" title="5.2 安装"></a>5.2 安装</h4><p>直接在上文创建出来的 <code>hello-world</code> chat 目录下， 执行<br><br><code>helm install ./</code><br>查看 release：<br><br><code>helm list</code><br>删除 release： <br><br><code>helm delete release-name</code></p>
 <h4 id="5-3-打包分发"><a href="#5-3-打包分发" class="headerlink" title="5.3 打包分发"></a>5.3 打包分发</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ helm package ./</span><br><span class="line">Successfully packaged chart and saved it to: /home/work/kube/helm/hello-world/hello-world-0.1.0.tgz</span><br></pre></td></tr></table></figure>
 <p>同样可以根据此 tgz 包来进行安装、回滚、升级<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ helm install hello-world-0.1.0.tgz</span><br><span class="line">$ helm rollback releasename 1 # releasename 由 helm list 获得， 回滚前一个版本</span><br><span class="line">$ helm upgrade releasename .  # 更新过 chart 并且 package 后， upgrade 替代 install 命令， 进行更新</span><br></pre></td></tr></table></figure></p>
+<p>参考：<br><br><a href="https://www.kubernetes.org.cn/3435.html" target="_blank" rel="noopener">是时候使用Helm了：Helm, Kubernetes的包管理工具</a><br><br><a href="https://docs.helm.sh/using_helm/#role-based-access-control" target="_blank" rel="noopener">TILLER AND ROLE-BASED ACCESS CONTROL</a><br><br><a href="https://github.com/kubernetes/helm/tree/master/docs" target="_blank" rel="noopener">helm github docs</a><br><br><a href="https://daemonza.github.io/2017/02/20/using-helm-to-deploy-to-kubernetes/" target="_blank" rel="noopener">Using Helm to deploy to Kubernetes</a><br></p>
 
       
     </div>
