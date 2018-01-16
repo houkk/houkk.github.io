@@ -411,8 +411,8 @@
 
       
         <p>本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。<br><a id="more"></a></p>
-<h3 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h3><p>首先新建项目，目前小游戏不提供公开注册，可点击体验小游戏使用无 AppID 模式（创建时如果建立快速启动模板，需要选择一个空的目录）。<img src="/2018/01/14/wechat_game/dir-structure-md/../../../../../images/wechat_game/createProject.jpg" alt=""></p>
-<h3 id="2-微信预览"><a href="#2-微信预览" class="headerlink" title="2. 微信预览"></a>2. 微信预览</h3><p>选择建立快速启动模板后，将会生成一个小游戏项目，并在开发工具中打开，这时点击开发工具右上角的预览按钮，会生成对应二维码，微信扫码即可。<br><img src="/2018/01/14/wechat_game/dir-structure-md/../../../../../images/wechat_game/yulan.jpg" alt=""> </p>
+<h3 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h3><p>首先新建项目，目前小游戏不提供公开注册，可点击体验小游戏使用无 AppID 模式（创建时如果建立快速启动模板，需要选择一个空的目录）。<img src="../../../../../images/wechat_game/createProject.jpg" alt=""></p>
+<h3 id="2-微信预览"><a href="#2-微信预览" class="headerlink" title="2. 微信预览"></a>2. 微信预览</h3><p>选择建立快速启动模板后，将会生成一个小游戏项目，并在开发工具中打开，这时点击开发工具右上角的预览按钮，会生成对应二维码，微信扫码即可。<br><img src="../../../../../images/wechat_game/yulan.jpg" alt=""> </p>
 <h3 id="3-目录结构"><a href="#3-目录结构" class="headerlink" title="3. 目录结构"></a>3. 目录结构</h3><p><code>./audio</code>: 音频目录文件 <br><br><code>./images</code>: 图片文件目录 <br><br><code>./js</code>: 主要源代码目录 <br><br><code>./game.js</code>: 主入口文件 <br><br><code>./game.json</code>: 配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">./js</span><br><span class="line">├── base                                   // 定义游戏开发基础类</span><br><span class="line">│   ├── animatoin.js                       // 帧动画的简易实现</span><br><span class="line">│   ├── pool.js                            // 对象池的简易实现</span><br><span class="line">│   └── sprite.js                          // 游戏基本元素精灵类</span><br><span class="line">├── libs</span><br><span class="line">│   ├── symbol.js                          // ES6 Symbol简易兼容</span><br><span class="line">│   └── weapp-adapter.js                   // 小游戏适配器</span><br><span class="line">├── npc</span><br><span class="line">│   └── enemy.js                           // 敌机类</span><br><span class="line">├── player</span><br><span class="line">│   ├── bullet.js                          // 子弹类</span><br><span class="line">│   └── index.js                           // 玩家类</span><br><span class="line">├── runtime</span><br><span class="line">│   ├── background.js                      // 背景类</span><br><span class="line">│   ├── gameinfo.js                        // 用于展示分数和结算界面</span><br><span class="line">│   └── music.js                           // 全局音效管理器</span><br><span class="line">├── databus.js                             // 管控游戏状态</span><br><span class="line">└── main.js                                // 游戏入口主函数</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -457,6 +457,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/15/k8s/k8s-first-md/" rel="prev" title="kubernetes入门">
+                kubernetes入门 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -544,7 +548,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -555,7 +559,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -566,7 +570,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
