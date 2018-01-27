@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="wechat_game," />
+  <meta name="keywords" content="promise," />
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。">
-<meta name="keywords" content="wechat_game">
+<meta name="description" content="Promise 简单实现，阅读深刻理解Promise系列, 先上代码，个人理解后续。">
+<meta name="keywords" content="promise">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小游戏目录结构">
-<meta property="og:url" content="https://houkk.github.io/2018/01/14/wechat_game/dir-structure-md/index.html">
+<meta property="og:title" content="promise 简单实现">
+<meta property="og:url" content="https://houkk.github.io/2018/01/27/promise-simple/index.html">
 <meta property="og:site_name" content="kk">
-<meta property="og:description" content="本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。">
+<meta property="og:description" content="Promise 简单实现，阅读深刻理解Promise系列, 先上代码，个人理解后续。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://houkk.github.io/images/wechat_game/createProject.jpg">
-<meta property="og:image" content="https://houkk.github.io/images/wechat_game/yulan.jpg">
-<meta property="og:updated_time" content="2018-01-14T12:30:19.000Z">
+<meta property="og:updated_time" content="2018-01-27T11:53:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小游戏目录结构">
-<meta name="twitter:description" content="本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。">
-<meta name="twitter:image" content="https://houkk.github.io/images/wechat_game/createProject.jpg">
+<meta name="twitter:title" content="promise 简单实现">
+<meta name="twitter:description" content="Promise 简单实现，阅读深刻理解Promise系列, 先上代码，个人理解后续。">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://houkk.github.io/2018/01/14/wechat_game/dir-structure-md/"/>
+  <link rel="canonical" href="https://houkk.github.io/2018/01/27/promise-simple/"/>
 
 
 
 
 
-  <title>微信小游戏目录结构 | kk</title>
+  <title>promise 简单实现 | kk</title>
   
 
 
@@ -300,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://houkk.github.io/2018/01/14/wechat_game/dir-structure-md/">
+    <link itemprop="mainEntityOfPage" href="https://houkk.github.io/2018/01/27/promise-simple/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kk Hou">
@@ -317,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">微信小游戏目录结构</h1>
+          <h1 class="post-title" itemprop="name headline">promise 简单实现</h1>
         
 
         <div class="post-meta">
@@ -329,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-14T19:52:10+08:00">
-                2018-01-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-27T19:48:37+08:00">
+                2018-01-27
               </time>
             
 
@@ -352,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/wechat/" itemprop="url" rel="index">
-                    <span itemprop="name">wechat</span>
+                  <a href="/categories/promise/" itemprop="url" rel="index">
+                    <span itemprop="name">promise</span>
                   </a>
                 </span>
 
@@ -370,8 +367,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/14/wechat_game/dir-structure-md/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/01/14/wechat_game/dir-structure-md/" itemprop="commentsCount"></span>
+                <a href="/2018/01/27/promise-simple/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/01/27/promise-simple/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -379,7 +376,7 @@
 
           
           
-             <span id="/2018/01/14/wechat_game/dir-structure-md/" class="leancloud_visitors" data-flag-title="微信小游戏目录结构">
+             <span id="/2018/01/27/promise-simple/" class="leancloud_visitors" data-flag-title="promise 简单实现">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,13 +407,10 @@
       
 
       
-        <p>本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。<br><a id="more"></a></p>
-<h3 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h3><p>首先新建项目，目前小游戏不提供公开注册，可点击体验小游戏使用无 AppID 模式（创建时如果建立快速启动模板，需要选择一个空的目录）。<img src="../../../../../images/wechat_game/createProject.jpg" alt=""></p>
-<h3 id="2-微信预览"><a href="#2-微信预览" class="headerlink" title="2. 微信预览"></a>2. 微信预览</h3><p>选择建立快速启动模板后，将会生成一个小游戏项目，并在开发工具中打开，这时点击开发工具右上角的预览按钮，会生成对应二维码，微信扫码即可。<br><img src="../../../../../images/wechat_game/yulan.jpg" alt=""> </p>
-<h3 id="3-目录结构"><a href="#3-目录结构" class="headerlink" title="3. 目录结构"></a>3. 目录结构</h3><p><code>./audio</code>: 音频目录文件 <br><br><code>./images</code>: 图片文件目录 <br><br><code>./js</code>: 主要源代码目录 <br><br><code>./game.js</code>: 主入口文件 <br><br><code>./game.json</code>: 配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">./js</span><br><span class="line">├── base                                   // 定义游戏开发基础类</span><br><span class="line">│   ├── animatoin.js                       // 帧动画的简易实现</span><br><span class="line">│   ├── pool.js                            // 对象池的简易实现</span><br><span class="line">│   └── sprite.js                          // 游戏基本元素精灵类</span><br><span class="line">├── libs</span><br><span class="line">│   ├── symbol.js                          // ES6 Symbol简易兼容</span><br><span class="line">│   └── weapp-adapter.js                   // 小游戏适配器</span><br><span class="line">├── npc</span><br><span class="line">│   └── enemy.js                           // 敌机类</span><br><span class="line">├── player</span><br><span class="line">│   ├── bullet.js                          // 子弹类</span><br><span class="line">│   └── index.js                           // 玩家类</span><br><span class="line">├── runtime</span><br><span class="line">│   ├── background.js                      // 背景类</span><br><span class="line">│   ├── gameinfo.js                        // 用于展示分数和结算界面</span><br><span class="line">│   └── music.js                           // 全局音效管理器</span><br><span class="line">├── databus.js                             // 管控游戏状态</span><br><span class="line">└── main.js                                // 游戏入口主函数</span><br></pre></td></tr></table></figure>
+        <p>Promise 简单实现，阅读<a href="https://www.jianshu.com/p/a89a8e5d6636" target="_blank" rel="noopener">深刻理解Promise系列</a>, 先上代码，个人理解后续。<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">function Promise(fn) &#123;</span><br><span class="line">    let cbs = [];</span><br><span class="line">    let state = &apos;pending&apos;;</span><br><span class="line">    let value = null;</span><br><span class="line"></span><br><span class="line">    function resolve(newValue) &#123;</span><br><span class="line">        if(newValue &amp;&amp; (typeof(newValue) === &apos;object&apos;) &amp;&amp; (typeof(newValue) === &apos;function&apos;))&#123;</span><br><span class="line">            let then = newValue.then;</span><br><span class="line">            then.call(newValue, resolve)</span><br><span class="line">        &#125;</span><br><span class="line">        state = &apos;resolved&apos;</span><br><span class="line">        value = newValue</span><br><span class="line">        setTimeout(function()&#123;</span><br><span class="line">            console.log(&apos;in resolve &apos;)</span><br><span class="line">            </span><br><span class="line">            cbs.map(_cb =&gt; handle(_cb))</span><br><span class="line">        &#125;, 0)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function handle(cb)&#123;</span><br><span class="line">        if(state == &apos;pending&apos;)&#123;</span><br><span class="line">            console.log(&apos;in then: pending&apos;)</span><br><span class="line">            cbs.push(cb)</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        let ret = cb.cb(value);</span><br><span class="line">        if(ret)&#123;</span><br><span class="line">            cb.resolve(ret)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            cb.resolve(value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    this.then = function(cb)&#123;</span><br><span class="line">        return new Promise(function(resolve, reject)&#123;</span><br><span class="line">            handle(&#123;</span><br><span class="line">                cb: cb || null,</span><br><span class="line">                resolve: resolve</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fn(resolve)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve, reject)&#123;</span><br><span class="line">    let a = 11;</span><br><span class="line">    console.log(&apos;111 ---&gt; &apos;, a)</span><br><span class="line">    setTimeout(()=&gt;&#123;</span><br><span class="line">        resolve(a)</span><br><span class="line">    &#125;, 0)</span><br><span class="line">&#125;).then(function(value)&#123;</span><br><span class="line">    setTimeout(()=&gt;&#123;</span><br><span class="line"></span><br><span class="line">        console.log(&apos;2222 ----&gt; &apos;, value)</span><br><span class="line">    &#125;, 0)</span><br><span class="line">&#125;).then(function(value)&#123;</span><br><span class="line">    console.log(&apos;3333 ----&gt; &apos;, value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>源码分析：参考 <a href="https://segmentfault.com/a/1190000012646888" target="_blank" rel="noopener">segmentfault的一篇文章</a> </p>
+<p>参考： <a href="https://www.jianshu.com/p/a89a8e5d6636" target="_blank" rel="noopener">深刻理解Promise系列</a></p>
 </blockquote>
 
       
@@ -435,7 +429,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/wechat-game/" rel="tag"># wechat_game</a>
+            <a href="/tags/promise/" rel="tag"># promise</a>
           
         </div>
       
@@ -448,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/14/wechat_game/prepare/" rel="next" title="微信小程序开发工具 linux 运行">
-                <i class="fa fa-chevron-left"></i> 微信小程序开发工具 linux 运行
+              <a href="/2018/01/16/k8s/helm-md/" rel="next" title="helm -- kubernets 的包管理工具">
+                <i class="fa fa-chevron-left"></i> helm -- kubernets 的包管理工具
               </a>
             
           </div>
@@ -457,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/15/k8s/k8s-first-md/" rel="prev" title="kubernetes入门">
-                kubernetes入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,17 +509,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -603,22 +584,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建项目"><span class="nav-number">1.</span> <span class="nav-text"><a href="#1-&#x521B;&#x5EFA;&#x9879;&#x76EE;" class="headerlink" title="1. &#x521B;&#x5EFA;&#x9879;&#x76EE;"></a>1. &#x521B;&#x5EFA;&#x9879;&#x76EE;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-微信预览"><span class="nav-number">2.</span> <span class="nav-text"><a href="#2-&#x5FAE;&#x4FE1;&#x9884;&#x89C8;" class="headerlink" title="2. &#x5FAE;&#x4FE1;&#x9884;&#x89C8;"></a>2. &#x5FAE;&#x4FE1;&#x9884;&#x89C8;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-目录结构"><span class="nav-number">3.</span> <span class="nav-text"><a href="#3-&#x76EE;&#x5F55;&#x7ED3;&#x6784;" class="headerlink" title="3. &#x76EE;&#x5F55;&#x7ED3;&#x6784;"></a>3. &#x76EE;&#x5F55;&#x7ED3;&#x6784;</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
