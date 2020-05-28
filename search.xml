@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2017/12/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo-next</title>
     <url>/2017/12/23/hexo-next/</url>
     <content><![CDATA[<h2 id="使用-hexo-next-搭建-github-pages-注意事项"><a href="#使用-hexo-next-搭建-github-pages-注意事项" class="headerlink" title="使用 hexo - next 搭建 github pages 注意事项"></a>使用 hexo - next 搭建 github pages 注意事项</h2><p><code>next version</code>： <code>5.1.3</code></p>
@@ -42,6 +63,18 @@
       </tags>
   </entry>
   <entry>
+    <title>怠惰了</title>
+    <url>/2020/05/28/other/</url>
+    <content><![CDATA[<p>准备把近些年的项目、笔记、文档、ppt, 整理一下写写博客; <br><br>然而发现当年选的博客主题好丑啊, 而且这个目录什么鬼, 为什么没有子目录, 而且留言貌似也不能用了; <br><br>算了, 就这样吧 。。。。。。</p>
+]]></content>
+      <categories>
+        <category>other</category>
+      </categories>
+      <tags>
+        <tag>other</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>promise 简单实现</title>
     <url>/2018/01/27/promise-simple/</url>
     <content><![CDATA[<p>Promise 简单实现，阅读<a href="https://www.jianshu.com/p/a89a8e5d6636" target="_blank" rel="noopener">深刻理解Promise系列</a>, 先上代码，个人理解后续。<br><a id="more"></a></p>
@@ -58,88 +91,971 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2017/12/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+    <title>Debezium docker 形式部署</title>
+    <url>/2020/05/28/debezium/debezium_docker/</url>
+    <content><![CDATA[<p>介绍采用 docker 形式的部署参数配置、注意事项</p>
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="1-docker-参数介绍"><a href="#1-docker-参数介绍" class="headerlink" title="1. docker 参数介绍"></a>1. docker 参数介绍</h2><ul>
+<li><code>BOOTSTRAP_SERVERS</code>: kafka:port,kafka2:port<ul>
+<li>kafka broker 地址列表</li>
+</ul>
+</li>
+<li><code>GROUP_ID</code>:<ul>
+<li>分布运行模式下, 供服务间互相发现</li>
+</ul>
+</li>
+<li><code>CONFIG_STORAGE_TOPIC</code>: string<ul>
+<li>topic 特点<ul>
+<li>单分区多副本</li>
+<li>clean policy: compact (default)</li>
+</ul>
+</li>
+<li>描述: connector、task 配置存储<ul>
+<li>当配置变更时新增数据</li>
+</ul>
+</li>
+<li>辅助参数:<ul>
+<li>CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 副本因子 (config.storage.replication.factor)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>OFFSET_STORAGE_TOPIC</code>: string</p>
+<ul>
+<li>topic 特点<ul>
+<li>多分区多副本 (默认 25 partition, 最小 3 副本)</li>
+<li>但是<code>当分区数发生变化时, 会出现 bug</code>, connetor 配置之前完成分区配置 (bug 修复前不再更改分区数)</li>
+<li>clean policy: compact</li>
+</ul>
+</li>
+<li>描述: 每个 connector 的偏移量存储</li>
+<li>辅助参数:<ul>
+<li>CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 副本因子 (offset.storage.replication.factor)</li>
+<li>OFFSET_FLUSH_INTERVAL_MS: Int (offset 刷新间隔)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>STATUS_STORAGE_TOPIC</code>: string</p>
+<ul>
+<li>topic 特点<ul>
+<li>多分区多副本 (未测试分区增加后的情况, 是不是和上面 offset 有同样问题)</li>
+<li>clean policy: compact</li>
+</ul>
+</li>
+<li>描述: connector、task 状态存储</li>
+<li>辅助参数:<ul>
+<li>CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 副本因子 (status.storage.replication.factor)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CONNECT_KEY_CONVERTER_SCHEMAS_ENABLE=false<ul>
+<li>converter 为 json 时关闭 schema</li>
+<li>决定表的 topic 数据, key 是否包含表结构信息</li>
+</ul>
+</li>
+<li>CONNECT_VALUE_CONVERTER_SCHEMAS_ENABLE=false<ul>
+<li>converter 为 json 时关闭 schema</li>
+<li>决定表的 topic 数据, value 是否包含表结构信息</li>
+</ul>
+</li>
+<li>CONNECT_PRODUCER_MAX_REQUEST_SIZE=20971520 (字节)<ul>
+<li>作为 producer 时, 发送数据大小限制. default: 1M</li>
+<li>需要配合 kafka MESSAGE_MAX_BYTES 字段, kafka 接收数据大小限制</li>
+</ul>
+</li>
+<li>CONNECT_DATABASE_HISTORY_KAFKA_RECOVERY_POLL_INTERVAL_MS=1000 （ms）<ul>
+<li>恢复超时配置</li>
+<li>history topic 保存 schema, connector 重启时, 需要拉取 schema 信息, 以便对数据进行特殊数据类型处理.</li>
+<li>default: 100ms 忘了</li>
+</ul>
+</li>
+<li>HEAP_OPTS=-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 # 需要配合 docker 内存限制使用<ul>
+<li>HEAP_OPTS=-Xmx512M -Xms256M</li>
+<li>java 内存限制</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-运行模式"><a href="#3-运行模式" class="headerlink" title="3. 运行模式"></a>3. 运行模式</h2><ul>
+<li>单机模式<ul>
+<li>字面意思</li>
+</ul>
+</li>
+<li>集群模式<ul>
+<li>参数配置: GROUP_ID (唯一字符串, 用来 connect 服务之间互相发现)</li>
+<li>简单介绍: 当 connect 服务宕机后, 可以保证 connector 任务在其他同集群下 connect 服务中创建并运行<ul>
+<li>集群多 debezium 自己完成 leader 选举</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-Rest-api"><a href="#4-Rest-api" class="headerlink" title="4. Rest api"></a>4. Rest api</h2><blockquote>
+<p><a href="http://kafka.apache.org/documentation.html#connect" target="_blank" rel="noopener">http://kafka.apache.org/documentation.html#connect</a></p>
+</blockquote>
+<ul>
+<li>GET /connectors – 返回所有正在运行的 connector 名</li>
+<li>POST /connectors – 新建一个 connector;请求体必须是 json 格式并且需要包含 name 字段和 config 字段，name 是 connector 的名字，config 是 json 格式，必须包含你的 connector 的配置信息。</li>
+<li>GET /connectors/{name} – 获取指定 connetor 的信息</li>
+<li>GET /connectors/{name}/config – 获取指定 connector 的配置信息</li>
+<li>PUT /connectors/{name}/config – 更新指定 connector 的配置信息 (完整的 config json)</li>
+<li>GET /connectors/{name}/status – 获取指定 connector 的状态，包括它是否在运行、停止、或者失败，如果发生错误，还会列出错误的具体信息。</li>
+<li>GET /connectors/{name}/tasks – 获取指定 connector 正在运行的 task。</li>
+<li>GET /connectors/{name}/tasks/{taskid}/status – 获取指定 connector 的 task 的状态信息</li>
+<li>PUT /connectors/{name}/pause – 暂停 connector 和它的 task，停止数据处理知道它被恢复。</li>
+<li>PUT /connectors/{name}/resume – 恢复一个被暂停的 connector</li>
+<li>POST /connectors/{name}/restart – 重启一个 connector，尤其是在一个 connector 运行失败的情况下比较常用</li>
+<li>POST /connectors/{name}/tasks/{taskId}/restart – 重启一个 task，一般是因为它运行失败才这样做。</li>
+<li>DELETE /connectors/{name} – 删除一个 connector，停止它的所有 task 并删除配置</li>
+<li>PUT /connector-plugins/{connector name: string}/config/validate<ul>
+<li>req: config 内容</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-容器内配置文件以及-debezium-镜像定制"><a href="#5-容器内配置文件以及-debezium-镜像定制" class="headerlink" title="5. 容器内配置文件以及 debezium 镜像定制"></a>5. 容器内配置文件以及 debezium 镜像定制</h2><h3 id="5-1-背景"><a href="#5-1-背景" class="headerlink" title="5.1 背景"></a>5.1 背景</h3><p>通过步骤四 debezium 提供的 restful api 在创建 CDC 监控任务时，数据库信息被显示的书写，容易造成数据库信息泄露，非常危险</p>
+<p>暴露场景如下<br>具体场景如下: <br></p>
+<ol>
+<li>创建监控 connector (connector 是监控任务的最大单元)</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Post /connectors</span><br><span class="line">&#123;</span><br><span class="line">    name: '',</span><br><span class="line">    config: &#123;</span><br><span class="line">        database.hostname: '',</span><br><span class="line">        database.user: '',</span><br><span class="line">        database.password: '',</span><br><span class="line">        database.whitelist: 'dbname',</span><br><span class="line">        talbe.whitelist: 'dbname.tableA,dbname.tabelB'</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>查看 connector 配置信息</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">GET /connectors/name/config</span><br><span class="line">&#123;</span><br><span class="line">    database.hostname: '',</span><br><span class="line">    database.user: '',</span><br><span class="line">    database.password: '',</span><br><span class="line">    database.whitelist: 'dbname',</span><br><span class="line">    talbe.whitelist: 'dbname.tableA,dbname.tabelB'</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>更新 connector 配置信息（需要全量信息，即也需要数据库信息）</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Put /connectors/name/config</span><br><span class="line">&#123;</span><br><span class="line">    database.hostname: '',</span><br><span class="line">    database.user: '',</span><br><span class="line">    database.password: '',</span><br><span class="line">    database.whitelist: 'dbname',</span><br><span class="line">    talbe.whitelist: 'dbname.tableA,dbname.tabelB'</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>简而言之, rest api 能够直接拿到线上的数据库配置信息</p>
+</blockquote>
+<h3 id="5-2-光放解决方案"><a href="#5-2-光放解决方案" class="headerlink" title="5.2 光放解决方案"></a>5.2 光放解决方案</h3><p>debezium 提供了<a href="https://debezium.io/blog/2019/12/13/externalized-secrets/" target="_blank" rel="noopener">数据库连接信息私密化</a>的功能</p>
+<h4 id="5-2-1-docker-容器配置"><a href="#5-2-1-docker-容器配置" class="headerlink" title="5.2.1 docker 容器配置"></a>5.2.1 docker 容器配置</h4><blockquote>
+<p>增加环境变量</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">CONNECT_CONFIG_PROVIDERS = file</span><br><span class="line">CONNECT_CONFIG_PROVIDERS_FILE_CLASS =</span><br><span class="line">  org.apache.kafka.common.config.provider.FileConfigProvider</span><br></pre></td></tr></table></figure>
+<h4 id="5-2-2-Api-变更"><a href="#5-2-2-Api-变更" class="headerlink" title="5.2.2 Api 变更"></a>5.2.2 Api 变更</h4><p>使用 <code>${file:/kafka/dbconfig/config_name:config_key}</code> 形式, 来代替数据库信息, 如下所示:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Post /connectors</span><br><span class="line">&#123;</span><br><span class="line">    name: <span class="string">''</span>,</span><br><span class="line">    config: &#123;</span><br><span class="line">        <span class="string">"database.hostname"</span>: <span class="string">"$&#123;file:/kafka/dbconfig/mysql_server_01.conf:MYSQL_SERVER_ADDRESS&#125;"</span>,</span><br><span class="line">        <span class="string">"database.user"</span>: <span class="string">"$&#123;file:/kafka/dbconfig/mysql_server_01.conf:MYSQL_SERVER_USERNAME&#125;"</span>,</span><br><span class="line">        <span class="string">"database.password"</span>: <span class="string">"$&#123;file:/kafka/dbconfig/mysql_server_01.conf:MYSQL_SERVER_PASSWORD&#125;"</span>,</span><br><span class="line">        <span class="string">"database.whitelist"</span>: <span class="string">"$&#123;file:/kafka/dbconfig/mysql_server_01.conf:MATERIAL_DATABASE_NAME&#125;"</span>,</span><br><span class="line">        <span class="string">"table.whitelist"</span>: <span class="string">"$&#123;file:/kafka/dbconfig/mysql_server_01.conf:MATERIAL_DATABASE_NAME&#125;.shop"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>file:/kafka/dbconfig/mysql_server_01.conf</code> 即为配置文件在 docker 容器中的绝对路径<br>mysql_server_01.conf<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">MYSQL_SERVER_ADDRESS=aaa</span></span><br><span class="line"><span class="string">MYSQL_SERVER_USERNAME=bbb</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>注意: 不要有任何其他符号, 比如引号</p>
+</blockquote>
+<p>这样无论在 get 请求 还是 kafka 信息中, hostname\user\password, 都是如上形式进行展示 <br><br>dbname 会在 kafka topic 的 offset topic 中暴露，不过没什么啥影响</p>
+<h3 id="5-3-解决方案实施"><a href="#5-3-解决方案实施" class="headerlink" title="5.3 解决方案实施"></a>5.3 解决方案实施</h3><p>由于该方案，只支持读取容器内配置文件的方式来获取信息，所以我们的主要工作就是把数据库配置文件，放入容器中，重新制作镜像。<br></p>
+<ul>
+<li>方案一: 制作镜像时, 把文件放到指定位置即可</li>
+<li>方案二: 更稳灵活, 在原有基础上, 添加新的 debezium 启动脚本，<ul>
+<li>启动之前，去拉取配置文件服务器下载对应配置文件到置顶位置</li>
+<li>正常启动服务</li>
+<li><a href="https://github.com/houkk/debezium_docker" target="_blank" rel="noopener">示例</a></li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>test</category>
+        <category>Debezium</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Debezium</tag>
       </tags>
   </entry>
   <entry>
-    <title>Scrapy-入门教程</title>
-    <url>/2017/12/23/web-spider/scrapy-%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。<br>本系列所有文档均已基于 linux 操作系统<br><a id="more"></a></p>
-<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ pip <span class="keyword">install</span> Scrapy</span><br></pre></td></tr></table></figure>
+    <title>Mongo Connector</title>
+    <url>/2020/05/28/debezium/mongo/</url>
+    <content><![CDATA[<p>依赖于 mongodb 的复制(副本集), 重放 oplog 实现数据变更行捕捉</p>
+<a id="more"></a>
+<h2 id="1-connector"><a href="#1-connector" class="headerlink" title="1. connector"></a>1. connector</h2><ul>
+<li><ol>
+<li>依赖于 mongodb 的副本集, 利用 oplog 完成数据同步</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>读取副本集的 primary node, 根据副本集状态, 始终保持连接 primary node (所以确保副本集的注册 host 可以被外部访问)</li>
+</ol>
+<ul>
+<li>副本集模式下所有的副本地址(rs.add 的地址)必须保证 connector 可以访问</li>
+<li>分片模式:<ul>
+<li>要保证 mongs host、mongos –configdb 配置的 config host、mongos 添加的分片 host (sh.addShard)、 config server 副本集 (rs.add 的 host)、shard 副本集（rs.add 的 host）全部可以被 connector 访问</li>
+<li>要保证 config server、分片下拥有特殊权限用户<ul>
+<li>另外, 分片下用户无法通过 mongos 创建, 需要分别创建</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>一个 collection 一个 topic, 和副本集、分片数无关</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>topic 分区方面</li>
+</ol>
+<ul>
+<li>可以确保同一 key 进入同一 topic, 即可以确保每个 document 操作的顺序性, 所以分区没什么影响</li>
+</ul>
+</li>
+<li><ol start="5">
+<li>配置项</li>
+</ol>
+<ul>
+<li><ol start="0">
+<li>mongodb.hosts (host:port)</li>
+</ol>
+<ul>
+<li>副本集模式: 主副本 host, 其实无所谓 (副本集的主副并不固定, 内部自行选举)</li>
+<li>分片副本集: config server host</li>
+</ul>
+</li>
+<li><ol>
+<li>指数规避配置 (暂时可以不予关注)</li>
+</ol>
+<ul>
+<li>connect.backoff.initial.delay.ms: 1s</li>
+<li>connect.backoff.max.delay.ms: 120s</li>
+<li>connect.max.attempts: 16</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>snapshot.mode</li>
+</ol>
+<ul>
+<li>connector 连接时是否进行数据备份</li>
+<li>initial: 进行过往数据 copy</li>
+<li>never: 只记录新数据</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>tasks.max</li>
+</ol>
+<ul>
+<li>默认 1</li>
+<li>大于等于分片数</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>tombstones.on.delete</li>
+</ol>
+<ul>
+<li>墓碑事件</li>
+</ul>
+</li>
+<li><ol start="5">
+<li>mongodb.user</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>mongodb.password</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>mongodb.name:</li>
+</ol>
+<ul>
+<li>类似 mysql/pg connector 的 database.server.name, 唯一、kafka topic 前缀</li>
+</ul>
+</li>
+<li><ol start="8">
+<li>database.whitelist</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>collection.whitelist</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>注意事项:<ul>
+<li>命名规则<ul>
+<li><ol>
+<li>服务名 /[a-z,A-Z,_][a-z,a-z,0-9,_]+/<br>-</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>config demo</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"connector.class"</span>: <span class="string">"io.debezium.connector.mongodb.MongoDbConnector"</span>,</span><br><span class="line">	  <span class="attr">"mongodb.hosts"</span>: <span class="string">"192.168.4.23:27017"</span>,</span><br><span class="line">	  <span class="attr">"mongodb.name"</span>: <span class="string">"mongo_01"</span>,</span><br><span class="line">    <span class="attr">"mongodb.user"</span>: <span class="string">"debezium"</span>,</span><br><span class="line">    <span class="attr">"mongodb.password"</span>: <span class="string">"dbz"</span>,</span><br><span class="line">    <span class="attr">"database.whitelist"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">    <span class="attr">"collection.whitelist"</span>: <span class="string">"inventory.customers,inventory.orders"</span>,</span><br><span class="line">    <span class="attr">"snapshot.mode"</span>: <span class="string">"never"</span>,</span><br><span class="line">    <span class="attr">"tasks.max"</span>: <span class="string">"1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-database"><a href="#2-database" class="headerlink" title="2. database"></a>2. database</h2><ul>
+<li>集群模式<ul>
+<li>分片模式和副本集模式(需要 oplog)</li>
+<li>需要有权限读取 oplog 集合的账户</li>
+</ul>
+</li>
+<li>注意事项:<ul>
+<li>命名规则</li>
+<li>副本集模式<ul>
+<li>内部权限 (keyfile)</li>
+<li>保证 rs.add 的每个节点地址, connector 都可以访问</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>特殊权限用户, 每个分片都需要(感觉这一点有点问题，太繁琐了，是用错了，还是怎么回事)</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">use</span> <span class="selector-tag">admin</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">db</span><span class="selector-class">.runCommand</span>(&#123;</span><br><span class="line">    <span class="attribute">createRole</span>: <span class="string">"listDatabases"</span>,</span><br><span class="line">    <span class="attribute">privileges</span>: [</span><br><span class="line">        &#123; <span class="attribute">resource</span>: &#123; <span class="attribute">cluster </span>: true &#125;, <span class="attribute">actions</span>: [<span class="string">"listDatabases"</span>]&#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attribute">roles</span>: []</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">db</span><span class="selector-class">.createUser</span>(&#123;</span><br><span class="line">    <span class="attribute">user</span>: <span class="string">'debezium'</span>,</span><br><span class="line">    <span class="attribute">pwd</span>: <span class="string">'dbz'</span>,</span><br><span class="line">    <span class="attribute">roles</span>: [</span><br><span class="line">        &#123; <span class="attribute">role</span>: <span class="string">"readWrite"</span>, <span class="attribute">db</span>: <span class="string">"inventory"</span> &#125;, <span class="comment">// inventory 为监控库</span></span><br><span class="line">        &#123; <span class="attribute">role</span>: <span class="string">"read"</span>, <span class="attribute">db</span>: <span class="string">"local"</span> &#125;,</span><br><span class="line">        &#123; <span class="attribute">role</span>: <span class="string">"listDatabases"</span>, <span class="attribute">db</span>: <span class="string">"admin"</span> &#125;,</span><br><span class="line">        &#123; <span class="attribute">role</span>: <span class="string">"read"</span>, <span class="attribute">db</span>: <span class="string">"config"</span> &#125;,</span><br><span class="line">        &#123; <span class="attribute">role</span>: <span class="string">"read"</span>, <span class="attribute">db</span>: <span class="string">"admin"</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="3-流程"><a href="#3-流程" class="headerlink" title="3. 流程"></a>3. 流程</h2><ul>
+<li>Initial sync<ul>
+<li>初始化同步 oplog</li>
+</ul>
+</li>
+<li>Tailing the oplog<ul>
+<li>拥有 offset 后, 读取 oplog</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-topic-payload-构成"><a href="#4-topic-payload-构成" class="headerlink" title="4. topic payload 构成"></a>4. topic payload 构成</h2><ul>
+<li>after: init 和 create 时的完整数据</li>
+<li>patch: update 时的 sql</li>
+<li>op:<ul>
+<li>r: snaphsot init</li>
+<li>u: update</li>
+<li>d: delete</li>
+<li>c: create</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-init-snapshot"><a href="#1-init-snapshot" class="headerlink" title="1. init snapshot"></a>1. init snapshot</h3><blockquote>
+<p>operation: r</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line"><span class="string">"payload"</span>: &#123;</span><br><span class="line">    <span class="string">"after"</span>: <span class="string">"&#123;\"</span>_id\<span class="string">": &#123;\"</span>$numberLong\<span class="string">": \"</span><span class="number">1001</span>\<span class="string">"&#125;,\"</span>first_name\<span class="string">": \"</span>Sally12\<span class="string">",\"</span>last_name\<span class="string">": \"</span>Thomas\<span class="string">",\"</span>email\<span class="string">": \"</span>sally.thomas<span class="symbol">@acme</span>.com\<span class="string">"&#125;"</span>,</span><br><span class="line">    <span class="string">"patch"</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">"source"</span>: &#123;</span><br><span class="line">      <span class="string">"version"</span>: <span class="string">"0.10.0.Final"</span>,</span><br><span class="line">      <span class="string">"connector"</span>: <span class="string">"mongodb"</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"mongo_02"</span>,</span><br><span class="line">      <span class="string">"ts_ms"</span>: <span class="number">1574235688000</span>,</span><br><span class="line">      <span class="string">"snapshot"</span>: <span class="string">"true"</span>,</span><br><span class="line">      <span class="string">"db"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">      <span class="string">"rs"</span>: <span class="string">"rs0"</span>,</span><br><span class="line">      <span class="string">"collection"</span>: <span class="string">"customers"</span>,</span><br><span class="line">      <span class="string">"ord"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="string">"h"</span>: <span class="number">5175105543699020230</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"op"</span>: <span class="string">"r"</span>,</span><br><span class="line">    <span class="string">"ts_ms"</span>: <span class="number">1574235691071</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-create"><a href="#2-create" class="headerlink" title="2. create"></a>2. create</h3><blockquote>
+<p>operation: c</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line"><span class="string">"payload"</span>: &#123;</span><br><span class="line">    <span class="string">"after"</span>: <span class="string">"&#123;\"</span>_id\<span class="string">": &#123;\"</span>$oid\<span class="string">": \"</span><span class="number">5</span>dd4ef7e9e9939487b6c0239\<span class="string">"&#125;,\"</span>first_name\<span class="string">": 3.0,\"</span>last_name\<span class="string">": 4.0,\"</span>email\<span class="string">": 5.0&#125;"</span>,</span><br><span class="line">    <span class="string">"patch"</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="string">"source"</span>: &#123;</span><br><span class="line">      <span class="string">"version"</span>: <span class="string">"0.10.0.Final"</span>,</span><br><span class="line">      <span class="string">"connector"</span>: <span class="string">"mongodb"</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"mongo_02"</span>,</span><br><span class="line">      <span class="string">"ts_ms"</span>: <span class="number">1574236030000</span>,</span><br><span class="line">      <span class="string">"snapshot"</span>: <span class="string">"false"</span>,</span><br><span class="line">      <span class="string">"db"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">      <span class="string">"rs"</span>: <span class="string">"rs0"</span>,</span><br><span class="line">      <span class="string">"collection"</span>: <span class="string">"customers"</span>,</span><br><span class="line">      <span class="string">"ord"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="string">"h"</span>: <span class="number">131523180395089317</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"op"</span>: <span class="string">"c"</span>,</span><br><span class="line">    <span class="string">"ts_ms"</span>: <span class="number">1574236030371</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-update"><a href="#3-update" class="headerlink" title="3. update"></a>3. update</h3><blockquote>
+<p>operation: u</p>
+</blockquote>
+<blockquote>
+<p>patch: 显示 set 操作, 为了保证 oplog 操作的幂等性, 保证重复执行后的正确性</p>
+</blockquote>
+<blockquote>
+<p>注意: patch 内容由 mongodb 提供, 且 mongodb 各个版本之间的 patch 可能存在不同</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line"><span class="string">"payload"</span>: &#123;</span><br><span class="line">  <span class="string">"after"</span>: <span class="literal">null</span>,</span><br><span class="line">  <span class="string">"patch"</span>: <span class="string">"&#123;\"</span>$v\<span class="string">": 1,\"</span>$set\<span class="string">": &#123;\"</span>last_name\<span class="string">": 5.0&#125;&#125;"</span>,</span><br><span class="line">  <span class="string">"source"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.10.0.Final"</span>,</span><br><span class="line">    <span class="string">"connector"</span>: <span class="string">"mongodb"</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"mongo_02"</span>,</span><br><span class="line">    <span class="string">"ts_ms"</span>: <span class="number">1574236075000</span>,</span><br><span class="line">    <span class="string">"snapshot"</span>: <span class="string">"false"</span>,</span><br><span class="line">    <span class="string">"db"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">    <span class="string">"rs"</span>: <span class="string">"rs0"</span>,</span><br><span class="line">    <span class="string">"collection"</span>: <span class="string">"customers"</span>,</span><br><span class="line">    <span class="string">"ord"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">"h"</span>: <span class="number">5737963839219456046</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"op"</span>: <span class="string">"u"</span>,</span><br><span class="line">  <span class="string">"ts_ms"</span>: <span class="number">1574236075380</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-delete"><a href="#4-delete" class="headerlink" title="4. delete"></a>4. delete</h3><blockquote>
+<p>operation: d</p>
+</blockquote>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="string">"payload"</span>: &#123;</span><br><span class="line">  <span class="string">"after"</span>: <span class="literal">null</span>,</span><br><span class="line">  <span class="string">"patch"</span>: <span class="literal">null</span>,</span><br><span class="line">  <span class="string">"source"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.10.0.Final"</span>,</span><br><span class="line">    <span class="string">"connector"</span>: <span class="string">"mongodb"</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"mongo_02"</span>,</span><br><span class="line">    <span class="string">"ts_ms"</span>: <span class="number">1574237481000</span>,</span><br><span class="line">    <span class="string">"snapshot"</span>: <span class="string">"false"</span>,</span><br><span class="line">    <span class="string">"db"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">    <span class="string">"rs"</span>: <span class="string">"rs0"</span>,</span><br><span class="line">    <span class="string">"collection"</span>: <span class="string">"customers"</span>,</span><br><span class="line">    <span class="string">"ord"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">"h"</span>: -<span class="number">3225175849180220485</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"op"</span>: <span class="string">"d"</span>,</span><br><span class="line">  <span class="string">"ts_ms"</span>: <span class="number">1574237481422</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>scrapy</category>
+        <category>Debezium</category>
       </categories>
       <tags>
-        <tag>scrapy</tag>
+        <tag>Debezium</tag>
       </tags>
   </entry>
   <entry>
-    <title>微信小程序开发工具 linux 运行</title>
-    <url>/2018/01/14/wechat_game/prepare/</url>
-    <content><![CDATA[<p>首先，微信小程序开发工具是用nw.js实现的，<a href="https://nwjs.io/" target="_blank" rel="noopener">nw.js</a>(直接从DOM中调用所有的Node.js模块)<br>本身是跨平台的，但是微信只出了开发工具的windows和mac版。<br>下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。<br><a id="more"></a></p>
-<h3 id="1-nw"><a href="#1-nw" class="headerlink" title="1.nw"></a>1.nw</h3><p>下载nwjs sdk（需要devtool的支援） 压缩包之后解压;</p>
-<h3 id="2-设置-path-变量；"><a href="#2-设置-path-变量；" class="headerlink" title="2.设置 path 变量；"></a>2.设置 path 变量；</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bashrc <span class="comment"># 视个人情况选择文件</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 加入步骤一中解压目录， </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如： <span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:/home/kk/Downloads/nwjs-sdk-v0.27.4-linux-x64"</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="3-package-nw"><a href="#3-package-nw" class="headerlink" title="3.package.nw"></a>3.package.nw</h3><p>在 windows 机器安装开发工具， 找到安装目录，将 package.nw 文件夹拷入 ubuntu 系统；</p>
-<h3 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行"></a>4.运行</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> package.nw</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nw .</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>PostgreSql Connector</title>
+    <url>/2020/05/28/debezium/pg/</url>
+    <content><![CDATA[<p>基于 pg 的逻辑复制功能, 需要 wal(logic) 和 逻辑解码输出插件的辅助, 实现数据变更事件通知</p>
+<a id="more"></a>
+<h2 id="1-PostgreSql-配置"><a href="#1-PostgreSql-配置" class="headerlink" title="1. PostgreSql 配置"></a>1. PostgreSql 配置</h2><ul>
+<li><ol>
+<li>版本: 9.6 or later (10.0 以上最好)</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>wal (write-ahead logs 预写日志)</li>
+</ol>
+<ul>
+<li><code>xlog</code>: pg 9.x 的 wal 叫做 xlog</li>
+<li>lsn(localtion 9.x): lsn 日志号, 标记 wal 文件以及文件内偏移量<ul>
+<li>32位/32位</li>
+<li>左边 32 位，通过计算获得 wal 日志的文件名: “timeline + lsn计算”</li>
+<li>右边 32 位，获得偏移量</li>
+</ul>
+</li>
+<li>逻辑解码</li>
+<li>output plugins</li>
+<li>replication slots</li>
+<li>wal_level: logic<ul>
+<li>wal 日志中加入信息支持逻辑解码, 增大 wal 日志, 尤其是 update、delete</li>
+<li>不支持 DDL、列存、压缩表的解码, 需要额外触发器处理 DDL, 可以做到表级订阅</li>
+</ul>
+</li>
+<li>不使用的 replication slots 要及时删除<ul>
+<li>replication slots 存在即保证从库宕机后, 主库不会删除从库上报的 lsn 之后的 wal</li>
+<li>connector 的 上报 lsn 不变化, 造成 xlog 堆积, 影响磁盘空间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>逻辑解码输出插件</li>
+</ol>
+<ul>
+<li>解码并输出</li>
+<li>pgoutput, 10+ 预装了</li>
+<li>wal2json, 基于 json, 由 wal2json 社区维护, 需要预装</li>
+<li>decoderbufs, 基于 protobuf, 由 debezium 社区维护，需要预装</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>数据库设置</li>
+</ol>
+<ul>
+<li><ol>
+<li>wal_level: logical</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>max_replication_slots >= 1</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>权限</li>
+</ol>
+<ul>
+<li>REPLICATION</li>
+<li>LOGIN</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>postgresql.conf</li>
+</ol>
+<ul>
+<li>shared_preload_libraries = ‘decoderbufs,wal2json’ (预装插件配置)</li>
+<li>wal_level = logical</li>
+<li>max_wal_senders = 1</li>
+<li>max_replication_slots = 1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="5">
+<li>表设置</li>
+</ol>
+<ul>
+<li><ol>
+<li>REPLICA IDENTITY (副本身份, 决定了在 kafka message 中 update 和 delete 事件 的 before 内容)</li>
+</ol>
+<ul>
+<li>DEFAULT: 仅显示主键</li>
+<li>NOTHING: nothing</li>
+<li>FULL: 全部信息</li>
+<li>INDEX: 索引信息</li>
+<li>查看 sql:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="6">
+<li>数据库字符集</li>
+</ol>
+<ul>
+<li>仅支持 UTF-8 字符集<ul>
+<li>connector 无法处理 单字节字符集中的 包含扩展 ASCII 码字符集的字符串 (<code>TODO</code>: 不太理解, 后续跟进)</li>
+<li>Debezium currently supports only database with UTF-8 character encoding. With a single byte character encoding it is not possible to correctly process strings containing extended ASCII code characters.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="7">
+<li>常用命令合集</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">// superuser 创建 publication, 使用 pgoutput 时需要事先创建</span><br><span class="line"><span class="keyword">CREATE</span> PUBLICATION $&#123;<span class="keyword">name</span>&#125; <span class="keyword">FOR</span> <span class="keyword">ALL</span> <span class="keyword">TABLES</span></span><br><span class="line"></span><br><span class="line">// publication</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> pg_publication;</span><br><span class="line"></span><br><span class="line">// <span class="keyword">show</span> publication <span class="keyword">tables</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> pg_publication_tables;</span><br><span class="line"></span><br><span class="line">// 复制插槽 列表</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> pg_replication_slots;</span><br><span class="line"></span><br><span class="line">// wal 等级</span><br><span class="line"><span class="keyword">show</span> wal_level;</span><br><span class="line"></span><br><span class="line">// 新安装插件</span><br><span class="line"><span class="keyword">SHOW</span> shared_preload_libraries;</span><br><span class="line"></span><br><span class="line">// 查看 REPLICA IDENTITY</span><br><span class="line"><span class="keyword">select</span></span><br><span class="line">	<span class="keyword">case</span> relreplident</span><br><span class="line">		<span class="keyword">when</span> <span class="string">'d'</span> <span class="keyword">then</span> <span class="string">'default'</span></span><br><span class="line">		<span class="keyword">when</span> <span class="string">'n'</span> <span class="keyword">then</span> <span class="string">'nothing'</span></span><br><span class="line">		<span class="keyword">when</span> <span class="string">'f'</span> <span class="keyword">then</span> <span class="string">'full'</span></span><br><span class="line">		<span class="keyword">when</span> <span class="string">'i'</span> <span class="keyword">then</span> <span class="string">'index'</span></span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">as</span> replica_indentity,</span><br><span class="line">	relname</span><br><span class="line"><span class="keyword">from</span> pg_class <span class="keyword">where</span> relname <span class="keyword">in</span> (<span class="string">'products'</span>, <span class="string">'geom'</span>, <span class="string">'orders'</span>, <span class="string">'customers'</span>);</span><br><span class="line"></span><br><span class="line">// 修改 REPLICA IDENTITY</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> test_debezium_1 replica <span class="keyword">IDENTITY</span> <span class="keyword">full</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-1-各平台配置流程"><a href="#1-1-各平台配置流程" class="headerlink" title="1.1 各平台配置流程"></a>1.1 各平台配置流程</h3><ul>
+<li>heroku 无法安装插件, 只能使用 pg 10+ 自带的逻辑解码</li>
+<li>Amazon RDS<ul>
+<li><ol>
+<li>rds.logical_replication: 1 (<code>TODO:</code> 此参数的修改意义, 貌似是开关)</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>wal_level: logical; 此参数无法修改, 步骤一修改后自动生效(或需重启)</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>plugin.name 修改</li>
+</ol>
+<ul>
+<li>10+ 默认 pgoutput</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>版本限制: wal2json 版本太低, 类型约束信息不完整</li>
+</ol>
+<ul>
+<li>Postgres 9.6: 9.6.10 and newer</li>
+<li>Postgres 10: 10.5 and newer</li>
+<li>Postgres 11: any version</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-connector"><a href="#2-connector" class="headerlink" title="2. connector"></a>2. connector</h2><h3 id="2-1-逻辑解码插件"><a href="#2-1-逻辑解码插件" class="headerlink" title="2.1 逻辑解码插件"></a>2.1 逻辑解码插件</h3><blockquote>
+<p>需要安装在 postgresql server 中, 用作解码 wal 为可读 (创建 replication slot 时亦会使用）</p>
+</blockquote>
+<blockquote>
+<p><a href="https://debezium.io/documentation/reference/0.10/postgres-plugins.html" target="_blank" rel="noopener">细节</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/debezium/postgres-decoderbufs" target="_blank" rel="noopener">decoderbufs</a><ul>
+<li>Debezium 社区维护, 基于 ProtoBuf</li>
+</ul>
+</li>
+<li><a href="https://github.com/eulerto/wal2json" target="_blank" rel="noopener">wal2json</a><ul>
+<li>wal2json 社区维护, 基于 json</li>
+<li><a href="https://debezium.io/documentation/reference/0.10/connectors/postgresql.html#discrepance-between-plugins" target="_blank" rel="noopener">一堆问题, 乱七八糟的</a></li>
+</ul>
+</li>
+<li>pgoutput<ul>
+<li>postgresql 10+ 自带 (Debezium 0.10 可用)</li>
+<li>满足条件的话，直接使用这个; (其余是 pg 10 之前的版本使用)</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-Connector"><a href="#2-2-Connector" class="headerlink" title="2.2 Connector"></a>2.2 Connector</h3><blockquote>
+<p>注意事项</p>
+</blockquote>
+<ul>
+<li>connector 依赖于 pg 的逻辑解码功能, 所以:<ul>
+<li><code>无法监控 DDL 变化</code></li>
+<li>逻辑解码器原因, connector 只能监控集群中<code>主服务器</code>变化<ul>
+<li>主服务宕机或被降级, connector 停止</li>
+<li>如果此服务器会被恢复, 重启 connector 即可</li>
+<li>如果其他服务器升级为主服务器， connector 重启前需要变更配置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>主键更改有风险: <a href="https://debezium.io/documentation/reference/0.10/connectors/postgresql.html#streaming-changes" target="_blank" rel="noopener">流式修改</a> -&gt; Note (TODO: 搞清楚怎么回事)<ul>
+<li>貌似没什么影响<ul>
+<li>无主键的表, 数据没有 key, 不是为 null</li>
+<li>将主键去除后(不是删列), 数据 key 仍为原来的 key 结构</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当 replication slot 丢失时, 需要重启 task 来自动 initReplicationSlot</li>
+</ul>
+<h3 id="2-3-connector-工作流程"><a href="#2-3-connector-工作流程" class="headerlink" title="2.3 connector 工作流程"></a>2.3 connector 工作流程</h3><ul>
+<li>snapshot<ul>
+<li><ol>
+<li>设置事务隔离级别 SERIALIZABLE, READ ONLY, DEFERRABLE (DEFERRABLE 保证了长时间执行时不与其他串行事务冲突)</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>对每张表加锁 SHARE UPDATE EXCLUSIVE MODE (锁有点乱, TODO: 整理并详解), 确保表结构不被更改</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>获取当前事务开始时 wal(lsn) 位置, 为了在 snaphsot 后从该位置开始监控数据, 防止数据遗漏</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>获取 schema, 如果开启数据同步, 同时会为每行现有数据生成 read 事件, 同步至 kafka 对应 topic</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>commit</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>记录快照完成 offset (? 和 步骤 3 的关系 ? 为了 snapshot 未完成时意外重启重新开始)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Streaming Changes<ul>
+<li>initReplicationSlot (replication slot, 没有则创建, 判断是否被其他进程占用)</li>
+<li>initPublication (pgoutput 插件需要 <code>publication</code> 来进行限定表白名单, 没有则创建 all tables)<ul>
+<li>可以事先用 superuser 创建, connector 默认 publication 为 <code>dbz_publication</code></li>
+</ul>
+</li>
+<li>从上述步骤 3 中获取到的 LSNs (Log Sequence Numbers) 开始</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-类型转换"><a href="#2-4-类型转换" class="headerlink" title="2.4 类型转换"></a>2.4 类型转换</h3><blockquote>
+<p>大体类型转换和 mysql 类似, 下面列出特殊点</p>
+</blockquote>
+<ul>
+<li>HSTORE =&gt; String (‘“a” =&gt; “b”‘ =&gt; “{“a”: “b”}”)</li>
+<li>网络地址类型<ul>
+<li>INET、CIDR、MACADDR、MACADDR8 =&gt; String</li>
+</ul>
+</li>
+<li>PostGIS Types (空间类型转化) (待续… 有空再说)</li>
+<li>Toasted: (存储内容超过 8 kb, 采用 Toasted 存储, 具体再说吧)</li>
+</ul>
+<h3 id="2-5-部署"><a href="#2-5-部署" class="headerlink" title="2.5 部署"></a>2.5 部署</h3><ul>
+<li><ol>
+<li>安装逻辑解码插件 (decoderbufs、wal2json …)</li>
+</ol>
+<ul>
+<li>pg 10+ 默认安装 pgoutput, 推荐使用 (pgoutput 需要 superuser 权限创建 publication, 或者事先创建)</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>配置 pg 支持逻辑复制 (见第一大项)</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>POST 创建 connector</li>
+</ol>
+<ul>
+<li><code>name</code>: ‘’ (connector 名称, 唯一性)</li>
+<li><code>config</code>:<ul>
+<li><code>connector.class</code>: “io.debezium.connector.postgresql.PostgresConnector”</li>
+<li><code>tasks.max</code>: 1</li>
+<li><code>plugin.name</code>: 见步骤一</li>
+<li><code>slot.name</code>: 逻辑解码槽, 保证 wal 不被清理, 所以, 要特别注意 (和 connector 一对一)</li>
+<li><code>publication</code>: 存在默认值, dbz_publication;<ul>
+<li>使用 pgoutput 时, 需创建;</li>
+<li>需要使用 supuser 创建, 由于目前功能缺陷, 可以事先创建 all tables 的 publication</li>
+</ul>
+</li>
+<li><code>slot.drop_on_stop</code>: true or false<ul>
+<li>connector 停止后 (stop 实例 ?), 是否删除 replication slot</li>
+<li>推荐测试环境设置为 true, 防止 wal 大量堆积, 占用磁盘空间</li>
+<li>生产环境设置为 false, 但一定要有 connector 宕机的处理预案以及磁盘空间预估, 不然准备迎接磁盘<code>爆满</code>吧</li>
+<li><strong><em><code>注意</code></em></strong> : 当为 true 时, connector 重启会删除、重建 slot, 会导致<code>数据丢失</code></li>
+</ul>
+</li>
+<li><code>database.hostname</code></li>
+<li><code>database.port</code></li>
+<li><code>database.user</code></li>
+<li><code>database.password</code></li>
+<li><code>database.dbname</code>: 库名</li>
+<li><code>database.server.name</code>: 服务名, 唯一性<ul>
+<li>topic name: <code>${database.server.name}.${schema name}.${table name}</code></li>
+</ul>
+</li>
+<li><code>schema.whitelis</code>t / <code>blacklist</code></li>
+<li><code>table.whitelist</code> / <code>blacklist</code></li>
+<li><code>column.blacklist</code>: schemaName.tableName.columnName</li>
+<li><code>decimal.handling.mode</code>: “string” (Decimal 以 string 形式存在)</li>
+<li><code>tombstones.on.delete</code>: true or false (kafka 墓碑事件)</li>
+<li><code>snapshot.mode</code>:<ul>
+<li><code>initial</code>(default): 仅在 connector 创建时执行快照</li>
+<li><code>always</code>: connector <code>每次启动</code>时执行快照</li>
+<li><code>never</code>: 字面意思</li>
+<li><code>initial_only</code>: 只执行快照, 后续的数据变化流不做处理</li>
+<li><code>exported</code>: 从 replication slot 创建的时间节点开始执行, 无锁</li>
+<li><code>custom</code>: 自己写代码, 同时需要制定 <code>snapshot.custom.class</code></li>
+</ul>
+</li>
+<li><code>snapshot.lock.timeout.ms</code>: 10000 (获取表锁超时时间)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"pg_inventory_1"</span>,</span><br><span class="line">    <span class="attr">"config"</span>: &#123;</span><br><span class="line">	    <span class="attr">"connector.class"</span>: <span class="string">"io.debezium.connector.postgresql.PostgresConnector"</span>,</span><br><span class="line">	    <span class="attr">"database.user"</span>: <span class="string">"postgres"</span>,</span><br><span class="line">	    <span class="attr">"database.dbname"</span>: <span class="string">"postgres"</span>,</span><br><span class="line">	    <span class="attr">"slot.name"</span>: <span class="string">"pg_inventory_1"</span>,</span><br><span class="line">	    <span class="attr">"database.server.name"</span>: <span class="string">"pg_inventory_1"</span>,</span><br><span class="line">	    <span class="attr">"database.port"</span>: <span class="string">"5432"</span>,</span><br><span class="line">	    <span class="attr">"plugin.name"</span>: <span class="string">"pgoutput"</span>,</span><br><span class="line">	    <span class="attr">"schema.whitelist"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">	    <span class="attr">"table.whitelist"</span>: <span class="string">"inventory.orders"</span>,</span><br><span class="line">	    <span class="attr">"slot.drop_on_stop"</span>: <span class="string">"true"</span>,</span><br><span class="line">	    <span class="attr">"decimal.handling.mode"</span>: <span class="string">"string"</span>,</span><br><span class="line">	    <span class="attr">"database.hostname"</span>: <span class="string">"192.168.4.21"</span>,</span><br><span class="line">	    <span class="attr">"database.password"</span>: <span class="string">"postgres"</span>,</span><br><span class="line">	    <span class="attr">"snapshot.mode"</span>: <span class="string">"never"</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3. 问题"></a>3. 问题</h2><ul>
+<li><ol>
+<li>更新配置时, 报错, 且出现数据丢失</li>
+</ol>
+<ul>
+<li>复现步骤<ul>
+<li>一切正常后</li>
+<li>没 200ms, update\delete\insert pg</li>
+<li>kafka 数据正常</li>
+<li>更新 table.whitelist</li>
+<li>待更新完成后, 发现数据丢失</li>
+</ul>
+</li>
+<li>原因: slot.drop_on_stop: true 时, connector 重启, 则 slot 删除后重建, 造成数据丢失</li>
+</ul>
+</li>
+</ul>
+<p>参考文档: <br></p>
+<ol>
+<li><a href="https://www.postgresql.org/docs/10/logical-replication.html" target="_blank" rel="noopener">逻辑复制</a> <br></li>
+<li><a href="https://juejin.im/entry/58ba3279570c350062124bc9" target="_blank" rel="noopener">pg 10.0 逻辑复制</a> <br></li>
+<li><a href="https://jdbc.postgresql.org/documentation/head/replication.html" target="_blank" rel="noopener">PG JDBC logical replication API</a> <br></li>
+</ol>
+]]></content>
       <categories>
-        <category>wechat</category>
+        <category>Debezium</category>
       </categories>
       <tags>
-        <tag>wechat_game</tag>
+        <tag>Debezium</tag>
       </tags>
   </entry>
   <entry>
-    <title>kubernetes入门</title>
-    <url>/2018/01/15/k8s/k8s-first-md/</url>
-    <content><![CDATA[<p>首先， Kubernetes(k8s)是一个全新的基于容器(docker/Rocket)技术的分布式架构解决方案。其次，是一个开放的开发平台，不同的是没有限定任何变成接口、语言、框架，可以很简单的将系统映射为k8s的Service。最后， 是一个一站式的完备的分布式系统支撑平台，k8s具有完备的集群管理能力，包括多层次的安全防护和准入机制、多租户的应用支撑能力、透明的服务注册和发现机制、内建智能负载均衡器、故障发现和自我修复能力、服务滚动升级和在线扩容能力、可扩展的资源自动调度机制，以及多粒度的资源配额管理能力。同时提供了涵盖开发、部署测试、运维监控在内的各个环节的管理工具。<br><a id="more"></a></p>
-<h3 id="1-Master-主节点"><a href="#1-Master-主节点" class="headerlink" title="1. Master(主节点)"></a>1. Master(主节点)</h3><p>组成： <br><br>1）APIServer： 负责对外提供 RESTful 的 k8s API服务，它是系统管理指令的统一入口，任何对资源进行增删改查的操作都要交给APIServer处理后再提交给etcd<br><br>2）scheduler： 负责调度pod到合适的Node上<br><br>3）Controller manager： 负责管理资源控制器（每个资源一般都对应有一个控制器）<br><br>4）etcd： 存储各个资源的状态，从而实现了Restful的API<br></p>
-<h3 id="2-Node-节点"><a href="#2-Node-节点" class="headerlink" title="2. Node(节点)"></a>2. Node(节点)</h3><p>组成：<br><br>1）Runtime： 指的是容器运行环境<br><br>2）kube-proxy： 服务发现和反向代理功能<br><br>3）kubelet： 是Master在每个Node节点上面的agent， 负责维护和管理该Node上面的由k8s创建的所有容器<br></p>
-<p>创建过程：<br><br>1）创建： k8s在物理机、虚拟机或其他云服务资源上创建一个 node 对象， 并对其进行一系列健康检查（是否可以联通、服务是否正确启动、是否可以创建pod等），然后在集群中标记其状态。<br><br>1）管理： k8s master 通过 Node Controller 管理集群内 node 的信息同步、生命周期等；<br><br>1）注册: k8s 推荐自注册， 由 kubelet 向 Apiserver 注册自己， 也可以手动注册。<br></p>
-<h3 id="3-Pod"><a href="#3-Pod" class="headerlink" title="3. Pod"></a>3. Pod</h3><p>在 k8s 中， Pod 是其基本操作单元，也是应用运行的载体。Pod 包含一个或者多个相关的容器（<strong>可以看成应用层的逻辑宿主机</strong>）。Pod 可以认为是容器的一种延伸扩展，一个Pod也是一个隔离体，而Pod内部包含的一组容器又是共享的。除此之外，Pod中的容器可以访问共同的数据卷来实现文件系统的共享。</p>
+    <title>Mysql Connector</title>
+    <url>/2020/05/28/debezium/mysql/</url>
+    <content><![CDATA[<p>connector 作为 slave 连接 mysql, 接收 行级 binary log, 实现数据变更事件通知</p>
 <blockquote>
-<p>Pod 同 docker 一样， 通过数据卷挂载来实现数据持久化（本地、网络等数据卷）。<br><br>Pod 封装 docker 的目的： docker 容器通信受 docker 网络机制限制（–link），通过 Pod 概念将容器组合在一个虚拟主机内，实现容器通过 localhost 通信（共享 PID 命名空间，网络命名空间，主机名，存储卷等，实现进程通信等）。<br></p>
+<p>connector 工作流程如下</p>
 </blockquote>
-<p>Pod 定义： 通过Yaml或Json格式的配置文件来完成, 示例如下：<br><br><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">apiVersion</span>: v1</span><br><span class="line"><span class="attribute">kind</span>: Pod</span><br><span class="line"><span class="attribute">metadata</span>:</span><br><span class="line">    <span class="attribute">name</span>: redis-slave</span><br><span class="line">    <span class="attribute">labels</span>:</span><br><span class="line">        <span class="attribute">name</span>: redis-slave</span><br><span class="line"><span class="attribute">spec</span>:</span><br><span class="line">    <span class="attribute">containers</span>:</span><br><span class="line">    - <span class="attribute">name</span>: slave</span><br><span class="line">      <span class="attribute">image</span>: kubeguide/guestbook-redis-slave</span><br><span class="line">      command： [<span class="string">'sh'</span>]</span><br><span class="line">      <span class="attribute">env</span>:</span><br><span class="line">    - <span class="attribute">name</span>: GET_HOSTS_FROM</span><br><span class="line">      <span class="attribute">value</span>: env</span><br><span class="line">      <span class="attribute">ports</span>:</span><br></pre></td></tr></table></figure></p>
-<p>Pod 基本操作： <br><br>增：<code>kubectl create -f xxx.yaml</code><br><br>删： <code>kubectl delete pod yourPodName</code> <br><br>改： <code>kubectl replace /path/to/yourNewYaml.yaml</code><br><br>查： <code>kubectl get pod yourPodName</code>， <code>kubectl describe pod yourPodName</code> </p>
-<h3 id="4-Label"><a href="#4-Label" class="headerlink" title="4. Label"></a>4. Label</h3><p>Label定义如 Pod、Service、RC、Node 等对象的可识别属性（key/value 键值对），用来对它们进行管理和选择，可以如上面示例那样定义以供创建时附加到对象，也可以在对象创建后通过API进行管理。通过 <code>selector</code> 来进行 label 选择，进行资源之间的关联。<br><br>如下代码所示， 将该资源与 <code>name： redis-slave</code> 的资源进行关联。<br><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">selector:</span></span><br><span class="line"><span class="symbol">  name:</span> redis-slave</span><br></pre></td></tr></table></figure></p>
-<h3 id="5-Replication-Controller（RC）"><a href="#5-Replication-Controller（RC）" class="headerlink" title="5. Replication Controller（RC）"></a>5. Replication Controller（RC）</h3><p>用于定义 Pod 副本的数量， 在Master内，Controller Manager进程通过RC的定义来完成Pod的创建、监控、启停等操作。多停少启，保证集群中运行着用户期望的副本数量。<br><br>与 Pod 类似， 通过 yaml 或 json 配置文件来定义。示例如下， 相比 Pod 定义， <code>kind</code> 变为 ReplicationController， 另外多了 <code>replicas</code>， 以及 Label 选择器 <code>selector</code>。 同时在 <code>template</code> 中定义了 Pod， 由于 RC 特性，通常通过这种形式来创建资源。<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ReplicationController</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment"># template 内定义 Pod， </span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">slave</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">kubeguide/guestbook-redis-slave</span></span><br><span class="line">        <span class="string">command：</span> <span class="string">['sh']</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">GET_HOSTS_FROM</span></span><br><span class="line">        <span class="attr">value:</span> <span class="string">env</span></span><br><span class="line">        <span class="attr">ports:</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="6-Deployment"><a href="#6-Deployment" class="headerlink" title="6. Deployment"></a>6. Deployment</h3><blockquote>
-<p>后续发展中，出现了 Replica Set – 下一代Replication Controller。相比与 RC <code>selector</code> 的 key/value， RS 还支持集合操作（in,notin ..etc）,后续肯定会加入更多功能.<br>Deployment使用了Replica Set，是更高一层的概念。同时，与 RC 相比， Deployment 拥有更加灵活强大的升级、回滚功能。除非需要自定义升级功能或根本不需要升级 Pod，所以推荐使用 Deployment 而不直接使用Replica Set.<br><br>Deployment 的定义 与 RC 类似， 主要变化：<br><figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">apiVersion:</span> extensions/v1beta1</span><br><span class="line"><span class="symbol">kind:</span> Deployment</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="7-Service（服务）"><a href="#7-Service（服务）" class="headerlink" title="7. Service（服务）"></a>7. Service（服务）</h3><p>Service 是一种抽象概念，它定义了一个 Pod 逻辑集合以及访问它们的策略。Service 可以看作一组提供相同服务的 Pod 的对外访问接口， 即 Pod 组成的集群。在受到 RC 调控的时候，Pod副本是变化的，对应的虚拟 IP 也是变化的，但 Service 的 Cluster IP 地址是 Kubernetes 系统中的虚拟IP地址(虚拟IP的范围通过k8s API Server的启动参数 –service-cluster-ip-range=19.254.0.0/16配置)，由系统动态分配，在销毁该 Service 之前，这个 IP 地址都不会再变化了。<br>这样， Service就可以作为 Pod 的访问入口，起到代理服务器的作用（同时可以代理 k8s 外部的服务），而对于访问者来说，通过Service进行访问，无需直接感知 Pod。<br></p>
+<ul>
+<li><ol>
+<li>snapshot record (初始化)</li>
+</ol>
+<ul>
+<li>对数据库 加全局只读锁 做快照读, 对需要监控的数据库 schema 和 数据做同步</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>binlog record</li>
+</ol>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="1-Mysql-配置"><a href="#1-Mysql-配置" class="headerlink" title="1. Mysql 配置"></a>1. Mysql 配置</h3><ul>
+<li>binlog_format<ul>
+<li><code>row level</code>: show variables like ‘binlog_format’;</li>
+</ul>
+</li>
+<li>version<ul>
+<li><code>5.6 or later</code>: select version()</li>
+</ul>
+</li>
+<li>GTID 可选</li>
+<li>创建特定用户<ul>
+<li>权限: GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT, LOCK TABLES ON _._ TO ‘debezium’ IDENTIFIED BY ‘dbz’;</li>
+<li>select: 查找行; <code>仅 snapshot 需要</code></li>
+<li>reload: flush 命令需要; <code>仅 snapshot 需要</code></li>
+<li>show databases: 获取所有 database 名称; <code>仅 snapshot 需要</code></li>
+<li>replication slave: connect and read binlog; <code>总是需要</code></li>
+<li>replication client: SHOW MASTER STATUS, SHOW SLAVE STATUS, and SHOW BINARY LOGS; <code>总是需要</code></li>
+<li>LOCK TABLES: 表级锁; <code>仅 aws 需要且加锁时需要</code></li>
+</ul>
+</li>
+<li>mysql 不同架构<ul>
+<li>单机: 没问题</li>
+<li>主从复制: connector 连接一台实例, 并且一直连接这台实例; 不同实例的 binlog 位置记录不同, 所以不可能切换实例</li>
+</ul>
+</li>
+<li>mysql 数据库名，表名: ([a-z,A-Z,0-9,_])</li>
+</ul>
+<h3 id="2-connector-参数"><a href="#2-connector-参数" class="headerlink" title="2. connector 参数"></a>2. connector 参数</h3><ul>
+<li>name: 唯一名称</li>
+<li>connector.class: 连接器的 java class, 如果 connect 中没有内置该连接器, 需要另行下载、安装该插件</li>
+<li>tasks.max: 默认为 1, mysql 不能改</li>
+<li>database.hostname: ..</li>
+<li>database.port: ..</li>
+<li>database.user: 前面提到的<code>特定用户</code></li>
+<li>database.password: ..</li>
+<li>database.whitelist: 逗号分隔白名单, 和 blacklist 无法共存</li>
+<li>database.blacklist: 逗号分隔黑名单, 和 whitelist 无法共存</li>
+<li>table.whitelist: .., 和 blacklist 无法共存</li>
+<li>table.blacklist: .., 和 whitelist 无法共存</li>
+<li>database.server.name:<ul>
+<li>字母或下划线开头</li>
+<li>mysql 集群中的唯一服务名;</li>
+<li>作为数据存储的 kafka topic 的前缀 (${server.name}.${db_name}.\${table_name})</li>
+</ul>
+</li>
+<li>database.server.id:<ul>
+<li>mysql 集群中唯一服务 id</li>
+<li>作为 slave 同步 mysql binary log, 所以和其他 mysql slave 也要区分</li>
+</ul>
+</li>
+<li>database.history.kafka.bootstrap.servers: kafka 地址 (逗号分隔)</li>
+<li>database.history.kafka.topic: mysql schema 变更记录 topic<ul>
+<li>目前为永不删除</li>
+</ul>
+</li>
+<li>database.history.store.only.monitored.tables.ddl: true or false<ul>
+<li>是否监控其余表的 schema 变化并存储</li>
+<li>阿里云 rds 有本身的健康嗅探表, 会不停的生成 ddl 语句, 由于 <code>history topic</code> 不会删除, 会导致数据累积。<ul>
+<li>mysql.ha_health_check</li>
+<li>任务重启时, 会将 schema 拉到本地, 做数据处理.</li>
+<li>如果不停累积, 将会影响拉取以及处理的耗时, 导致其他一系列乱七八糟的问题</li>
+</ul>
+</li>
+<li>所以, 建议设置为 true, 只监控 table.whitelist 中 schema 变更</li>
+</ul>
+</li>
+<li>snapshot.mode: snapshot 类型<ul>
+<li>默认(initial)会将数据库 schema 和 所有数据生成 create 事件, 传入 kafka;</li>
+<li>我们选择 schema_only(只同步 schema)</li>
+</ul>
+</li>
+<li>snapshot.locking.mode<ul>
+<li>是否持有全局读锁</li>
+<li>innotdb 下, 全局锁和一致性读都可以用来备份, 而源码中两者重合了, 所以该选项可以设为 none</li>
+</ul>
+</li>
+<li>snapshot.new.tables: parallel<ul>
+<li>使得更改 table.whitlist 操作生效</li>
+<li>貌似是 <code>beta</code> 参数, 温柔修改白\黑名单, 不然会绝望的</li>
+</ul>
+</li>
+<li>decimal.handling.mode: string<ul>
+<li>decimal/numberic 默认转为 bytes, 暂处理为 string, 更易读、处理</li>
+</ul>
+</li>
+<li>gtid.new.channel.position: (new channel 即 GTID 前缀发生变化, 主要发生在 master 故障转移至其他 slave, 导致当前 slave 收到信息的 GTID 发生变化)<ul>
+<li>latest (default): 即当 debezium 再次连接时(若切换 master 之间暂停或断开)从最新位置开始同步数据</li>
+<li>earliest: 读取<code>新</code> GTID 且未被清理的所有数据</li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<p>虚拟 IP 属于 k8s 内部的虚拟网络，外部是寻址不到的。在 k8s 系统中，实际上是由 k8s Proxy组件负责实现虚拟 IP 路由和转发的，所以k8s Node中都必须运行了k8s Proxy，从而在容器覆盖网络之上又实现了k8s层级的虚拟转发网络。<br><br>将服务发布至外部网络访问<a href="http://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/" target="_blank" rel="noopener">方式</a><br></p>
+<p>示例如下</p>
 </blockquote>
-<p>由于 pod 会随时销毁重建， 所以 k8s 会根据 Service 关联到 Pod 的 PodIP 信息组合成一个 Endpoints，用来相互衔接， 并且 Endpoints 会随着 pod 的变化而变化</p>
-<h3 id="8-Volume（存储卷）"><a href="#8-Volume（存储卷）" class="headerlink" title="8. Volume（存储卷）"></a>8. Volume（存储卷）</h3><p>k8s 的 Volume 概念与 Docker 的 Volume 比较类似，但不完全相同， 有<code>本地</code>、<code>网络</code>、<code>信息</code>等几种类型的数据卷。</p>
-<h3 id="9-简单创建资源流程"><a href="#9-简单创建资源流程" class="headerlink" title="9. 简单创建资源流程"></a>9. 简单创建资源流程</h3><p>假设有 <code>Deployment</code> 定义文件 <code>deployment-demo.yaml</code> 和 <code>Service</code> 定义文件 <code>service-demo.yaml</code><br><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ kubectl create deployment-demo.yaml # 创建控制器和 Pod</span><br><span class="line">$ kubectl create service-demo.yaml    # 创建<span class="built_in"> service </span>和 endpoints</span><br><span class="line">$ kubectl <span class="builtin-name">get</span> all                     # 查看所有资源信息</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"connector.class"</span>: <span class="string">"io.debezium.connector.mysql.MySqlConnector"</span>,</span><br><span class="line">    <span class="attr">"snapshot.locking.mode"</span>: <span class="string">"none"</span>,</span><br><span class="line">    <span class="attr">"database.user"</span>: <span class="string">"debezium"</span>,</span><br><span class="line">    <span class="attr">"database.server.id"</span>: <span class="string">"222333221"</span>,</span><br><span class="line">    <span class="attr">"tasks.max"</span>: <span class="string">"1"</span>,</span><br><span class="line">    <span class="attr">"database.history.kafka.bootstrap.servers"</span>: <span class="string">"192.168.4.22:9092"</span>,</span><br><span class="line">    <span class="attr">"database.history.kafka.topic"</span>: <span class="string">"history_inventory_1"</span>,</span><br><span class="line">    <span class="attr">"database.server.name"</span>: <span class="string">"mysql_inventory_1"</span>,</span><br><span class="line">    <span class="attr">"database.port"</span>: <span class="string">"3306"</span>,</span><br><span class="line">    <span class="attr">"table.whitelist"</span>: <span class="string">"inventory.orders"</span>,</span><br><span class="line">    <span class="attr">"decimal.handling.mode"</span>: <span class="string">"string"</span>,</span><br><span class="line">    <span class="attr">"database.hostname"</span>: <span class="string">"192.168.4.23"</span>,</span><br><span class="line">    <span class="attr">"database.password"</span>: <span class="string">"dbz"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"mysql_inventory_1"</span>,</span><br><span class="line">    <span class="attr">"database.history.store.only.monitored.tables.ddl"</span>: <span class="string">"true"</span>,</span><br><span class="line">    <span class="attr">"database.whitelist"</span>: <span class="string">"inventory"</span>,</span><br><span class="line">    <span class="attr">"snapshot.mode"</span>: <span class="string">"schema_only"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-启动流程"><a href="#3-启动流程" class="headerlink" title="3. 启动流程"></a>3. 启动流程</h3><ul>
+<li><p>snapshot</p>
+<ul>
+<li>功能:<ul>
+<li><ol>
+<li>设置 session 下 REPEATABLE READ 隔离级别 和全局锁 (aws 全局锁失败，针对白名单，加表级读锁)</li>
+</ol>
+<ul>
+<li><code>snapshot.locking.mode: none</code> 跳过加锁</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>start transaction with consistent snapshot 快照读事务: 显示开启快照, 而不是像一般情况下, 第一次 select 开启快照读</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>binglog 文件名和 position、gtid 等获取</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>实例下数据库列表获取</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>每个库的表列表获取</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>connect 配置白名单数据库的 drop create 语句导入 kafka 特定 topic</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>全局锁时解锁</li>
+</ol>
+<ul>
+<li>unlock tables 在针对全局，不会隐式提交</li>
+<li>针对 lock table 时，会触发隐式提交</li>
+</ul>
+</li>
+<li><ol start="8">
+<li>对每个表进行扫描，并对每行数据生成 create 事件，导入 kafka</li>
+</ol>
+<ul>
+<li>可通过 <code>snapshot.mode: schema_only</code> 来跳过此步骤</li>
+</ul>
+</li>
+<li><ol start="9">
+<li>commit</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>再次解锁(主要针对表级锁)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>注意:</p>
+<ul>
+<li><ol>
+<li>默认情况下全局锁, 当无法获得全局锁(比如 aws rds)时, 会对每个表分别加表级读锁。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>但是表级锁的 unlock 命令会做隐式事务提交，导致 步骤 8 和 上面步骤不在同一事务中。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>那么此时的步骤 8 就脱离了快照读的范围，此时如果有数据插入:</li>
+</ol>
+<ul>
+<li>一方面会被步骤 8 数据扫描, 创建 create 事件进入 kafka;</li>
+<li>另一方面，会在步骤 3 获取的 binlog 位置后面插入 create 记录, 然后等到 connector 快照模式完成 进入 binglog 同步模式，就会生成 Create 事件，导致重复。（或者删除操作，binlog 删除时，指向了一个不存在的 id 等）</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>所以表级锁的解锁放在事务提交后，这样如果数据库很大，就有的等了</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-添加-table-whitelist"><a href="#4-添加-table-whitelist" class="headerlink" title="4. 添加 table.whitelist"></a>4. 添加 table.whitelist</h3><ul>
+<li>旧方法:<ul>
+<li><ol>
+<li>add table</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>pasue connector</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>delete history topic</li>
+</ol>
+<ul>
+<li>3.1 如果此流程不起作用, 可以重来一遍，然后在此位置，手动在 topic offsets 下, 此 connector 对应的 topic 分区下，手动添加 offset 信息, 将 table.whitelist 和 table.blacklist 自定义</li>
+<li><code>缺点</code>:<ul>
+<li><ol>
+<li>可能会<code>数据重复</code>， 新的 offset 信息， pos 没有变化，重启后，再从 此 pos 位置读取数据，此位置后，已经存储的数据，就会出现重复。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>如果手动插入的此条 offset pos/gtid 信息过旧，那么新表会把此 offset pos/gtid 后的所有符合表白名单的数据，同步到 kafka；<code>如果数据非常多</code>，<code>比较耗时</code>；毕竟单 connector 单 task 处理数据，每秒 3300 条所有</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>update config (“snapshot.mode”: “schema_only_recovery”)</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>restart connector\task</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>write data to new table</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>恢复 snapshot.mode</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>新方法:<ul>
+<li>功能仍在测试中 0.9.0 版本添加</li>
+<li>connector config 中加入 “snapshot.new.tables”: “parallel”, (off 为关闭 whitelist 实时变更)</li>
+<li>然后通过 restful api 依次重启 connector、task</li>
+</ul>
+</li>
+<li>重点:<ul>
+<li>新方法貌似不太好用, 一顿乱七八糟操作后就废了。但是把 connect 容器全部重建之后可用(重启无用), 比较诡异</li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<p>参考： <br><br><a href="https://www.jianshu.com/p/63ffc2214788" target="_blank" rel="noopener">kubernetes入门</a><br><br><a href="https://www.cnblogs.com/zhenyuyaodidiao/p/6500720.html" target="_blank" rel="noopener">Kubernetes核心概念总结</a><br><br><a href="https://kubernetes.io/docs/concepts/" target="_blank" rel="noopener">k8s 概念</a><br><br><a href="http://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/" target="_blank" rel="noopener">Accessing Kubernetes Pods from Outside of the Cluster</a></p>
+<p>更多信息, 比如 topic 内数据格式, 更多的数据格式兼容问题, 请查看参考文章</p>
 </blockquote>
+<p>参考: <br></p>
+<ul>
+<li><a href="https://debezium.io/documentation/reference/1.1/connectors/mysql.html" target="_blank" rel="noopener">debezium mysql</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>k8s</category>
+        <category>Debezium</category>
       </categories>
       <tags>
-        <tag>k8s</tag>
+        <tag>Debezium</tag>
       </tags>
   </entry>
   <entry>
@@ -149,6 +1065,7 @@
 <li>分布式 CDC 服务</li>
 <li>生成数据库行级变化事件流的分布式平台</li>
 <li>基于 kafka connect</li>
+<li>位于 kafka 和 其他数据系统之间的数据工具, 内置 producer 和 consumer 接口, 提供插件模式(供使用者自定义开发 connector、converter等, 将数据导入导出 kafka、格式化等)</li>
 </ul>
 <blockquote>
 <p>项目很好, 问题修复非常及时<br>大体构成: debezium( connector( task))</p>
@@ -258,6 +1175,42 @@
       </tags>
   </entry>
   <entry>
+    <title>kubernetes入门</title>
+    <url>/2018/01/15/k8s/k8s-first-md/</url>
+    <content><![CDATA[<p>首先， Kubernetes(k8s)是一个全新的基于容器(docker/Rocket)技术的分布式架构解决方案。其次，是一个开放的开发平台，不同的是没有限定任何变成接口、语言、框架，可以很简单的将系统映射为k8s的Service。最后， 是一个一站式的完备的分布式系统支撑平台，k8s具有完备的集群管理能力，包括多层次的安全防护和准入机制、多租户的应用支撑能力、透明的服务注册和发现机制、内建智能负载均衡器、故障发现和自我修复能力、服务滚动升级和在线扩容能力、可扩展的资源自动调度机制，以及多粒度的资源配额管理能力。同时提供了涵盖开发、部署测试、运维监控在内的各个环节的管理工具。<br><a id="more"></a></p>
+<h3 id="1-Master-主节点"><a href="#1-Master-主节点" class="headerlink" title="1. Master(主节点)"></a>1. Master(主节点)</h3><p>组成： <br><br>1）APIServer： 负责对外提供 RESTful 的 k8s API服务，它是系统管理指令的统一入口，任何对资源进行增删改查的操作都要交给APIServer处理后再提交给etcd<br><br>2）scheduler： 负责调度pod到合适的Node上<br><br>3）Controller manager： 负责管理资源控制器（每个资源一般都对应有一个控制器）<br><br>4）etcd： 存储各个资源的状态，从而实现了Restful的API<br></p>
+<h3 id="2-Node-节点"><a href="#2-Node-节点" class="headerlink" title="2. Node(节点)"></a>2. Node(节点)</h3><p>组成：<br><br>1）Runtime： 指的是容器运行环境<br><br>2）kube-proxy： 服务发现和反向代理功能<br><br>3）kubelet： 是Master在每个Node节点上面的agent， 负责维护和管理该Node上面的由k8s创建的所有容器<br></p>
+<p>创建过程：<br><br>1）创建： k8s在物理机、虚拟机或其他云服务资源上创建一个 node 对象， 并对其进行一系列健康检查（是否可以联通、服务是否正确启动、是否可以创建pod等），然后在集群中标记其状态。<br><br>1）管理： k8s master 通过 Node Controller 管理集群内 node 的信息同步、生命周期等；<br><br>1）注册: k8s 推荐自注册， 由 kubelet 向 Apiserver 注册自己， 也可以手动注册。<br></p>
+<h3 id="3-Pod"><a href="#3-Pod" class="headerlink" title="3. Pod"></a>3. Pod</h3><p>在 k8s 中， Pod 是其基本操作单元，也是应用运行的载体。Pod 包含一个或者多个相关的容器（<strong>可以看成应用层的逻辑宿主机</strong>）。Pod 可以认为是容器的一种延伸扩展，一个Pod也是一个隔离体，而Pod内部包含的一组容器又是共享的。除此之外，Pod中的容器可以访问共同的数据卷来实现文件系统的共享。</p>
+<blockquote>
+<p>Pod 同 docker 一样， 通过数据卷挂载来实现数据持久化（本地、网络等数据卷）。<br><br>Pod 封装 docker 的目的： docker 容器通信受 docker 网络机制限制（–link），通过 Pod 概念将容器组合在一个虚拟主机内，实现容器通过 localhost 通信（共享 PID 命名空间，网络命名空间，主机名，存储卷等，实现进程通信等）。<br></p>
+</blockquote>
+<p>Pod 定义： 通过Yaml或Json格式的配置文件来完成, 示例如下：<br><br><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">apiVersion</span>: v1</span><br><span class="line"><span class="attribute">kind</span>: Pod</span><br><span class="line"><span class="attribute">metadata</span>:</span><br><span class="line">    <span class="attribute">name</span>: redis-slave</span><br><span class="line">    <span class="attribute">labels</span>:</span><br><span class="line">        <span class="attribute">name</span>: redis-slave</span><br><span class="line"><span class="attribute">spec</span>:</span><br><span class="line">    <span class="attribute">containers</span>:</span><br><span class="line">    - <span class="attribute">name</span>: slave</span><br><span class="line">      <span class="attribute">image</span>: kubeguide/guestbook-redis-slave</span><br><span class="line">      command： [<span class="string">'sh'</span>]</span><br><span class="line">      <span class="attribute">env</span>:</span><br><span class="line">    - <span class="attribute">name</span>: GET_HOSTS_FROM</span><br><span class="line">      <span class="attribute">value</span>: env</span><br><span class="line">      <span class="attribute">ports</span>:</span><br></pre></td></tr></table></figure></p>
+<p>Pod 基本操作： <br><br>增：<code>kubectl create -f xxx.yaml</code><br><br>删： <code>kubectl delete pod yourPodName</code> <br><br>改： <code>kubectl replace /path/to/yourNewYaml.yaml</code><br><br>查： <code>kubectl get pod yourPodName</code>， <code>kubectl describe pod yourPodName</code> </p>
+<h3 id="4-Label"><a href="#4-Label" class="headerlink" title="4. Label"></a>4. Label</h3><p>Label定义如 Pod、Service、RC、Node 等对象的可识别属性（key/value 键值对），用来对它们进行管理和选择，可以如上面示例那样定义以供创建时附加到对象，也可以在对象创建后通过API进行管理。通过 <code>selector</code> 来进行 label 选择，进行资源之间的关联。<br><br>如下代码所示， 将该资源与 <code>name： redis-slave</code> 的资源进行关联。<br><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">selector:</span></span><br><span class="line"><span class="symbol">  name:</span> redis-slave</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-Replication-Controller（RC）"><a href="#5-Replication-Controller（RC）" class="headerlink" title="5. Replication Controller（RC）"></a>5. Replication Controller（RC）</h3><p>用于定义 Pod 副本的数量， 在Master内，Controller Manager进程通过RC的定义来完成Pod的创建、监控、启停等操作。多停少启，保证集群中运行着用户期望的副本数量。<br><br>与 Pod 类似， 通过 yaml 或 json 配置文件来定义。示例如下， 相比 Pod 定义， <code>kind</code> 变为 ReplicationController， 另外多了 <code>replicas</code>， 以及 Label 选择器 <code>selector</code>。 同时在 <code>template</code> 中定义了 Pod， 由于 RC 特性，通常通过这种形式来创建资源。<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ReplicationController</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment"># template 内定义 Pod， </span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">slave</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">kubeguide/guestbook-redis-slave</span></span><br><span class="line">        <span class="string">command：</span> <span class="string">['sh']</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">GET_HOSTS_FROM</span></span><br><span class="line">        <span class="attr">value:</span> <span class="string">env</span></span><br><span class="line">        <span class="attr">ports:</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="6-Deployment"><a href="#6-Deployment" class="headerlink" title="6. Deployment"></a>6. Deployment</h3><blockquote>
+<p>后续发展中，出现了 Replica Set – 下一代Replication Controller。相比与 RC <code>selector</code> 的 key/value， RS 还支持集合操作（in,notin ..etc）,后续肯定会加入更多功能.<br>Deployment使用了Replica Set，是更高一层的概念。同时，与 RC 相比， Deployment 拥有更加灵活强大的升级、回滚功能。除非需要自定义升级功能或根本不需要升级 Pod，所以推荐使用 Deployment 而不直接使用Replica Set.<br><br>Deployment 的定义 与 RC 类似， 主要变化：<br><figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">apiVersion:</span> extensions/v1beta1</span><br><span class="line"><span class="symbol">kind:</span> Deployment</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="7-Service（服务）"><a href="#7-Service（服务）" class="headerlink" title="7. Service（服务）"></a>7. Service（服务）</h3><p>Service 是一种抽象概念，它定义了一个 Pod 逻辑集合以及访问它们的策略。Service 可以看作一组提供相同服务的 Pod 的对外访问接口， 即 Pod 组成的集群。在受到 RC 调控的时候，Pod副本是变化的，对应的虚拟 IP 也是变化的，但 Service 的 Cluster IP 地址是 Kubernetes 系统中的虚拟IP地址(虚拟IP的范围通过k8s API Server的启动参数 –service-cluster-ip-range=19.254.0.0/16配置)，由系统动态分配，在销毁该 Service 之前，这个 IP 地址都不会再变化了。<br>这样， Service就可以作为 Pod 的访问入口，起到代理服务器的作用（同时可以代理 k8s 外部的服务），而对于访问者来说，通过Service进行访问，无需直接感知 Pod。<br></p>
+<blockquote>
+<p>虚拟 IP 属于 k8s 内部的虚拟网络，外部是寻址不到的。在 k8s 系统中，实际上是由 k8s Proxy组件负责实现虚拟 IP 路由和转发的，所以k8s Node中都必须运行了k8s Proxy，从而在容器覆盖网络之上又实现了k8s层级的虚拟转发网络。<br><br>将服务发布至外部网络访问<a href="http://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/" target="_blank" rel="noopener">方式</a><br></p>
+</blockquote>
+<p>由于 pod 会随时销毁重建， 所以 k8s 会根据 Service 关联到 Pod 的 PodIP 信息组合成一个 Endpoints，用来相互衔接， 并且 Endpoints 会随着 pod 的变化而变化</p>
+<h3 id="8-Volume（存储卷）"><a href="#8-Volume（存储卷）" class="headerlink" title="8. Volume（存储卷）"></a>8. Volume（存储卷）</h3><p>k8s 的 Volume 概念与 Docker 的 Volume 比较类似，但不完全相同， 有<code>本地</code>、<code>网络</code>、<code>信息</code>等几种类型的数据卷。</p>
+<h3 id="9-简单创建资源流程"><a href="#9-简单创建资源流程" class="headerlink" title="9. 简单创建资源流程"></a>9. 简单创建资源流程</h3><p>假设有 <code>Deployment</code> 定义文件 <code>deployment-demo.yaml</code> 和 <code>Service</code> 定义文件 <code>service-demo.yaml</code><br><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ kubectl create deployment-demo.yaml # 创建控制器和 Pod</span><br><span class="line">$ kubectl create service-demo.yaml    # 创建<span class="built_in"> service </span>和 endpoints</span><br><span class="line">$ kubectl <span class="builtin-name">get</span> all                     # 查看所有资源信息</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参考： <br><br><a href="https://www.jianshu.com/p/63ffc2214788" target="_blank" rel="noopener">kubernetes入门</a><br><br><a href="https://www.cnblogs.com/zhenyuyaodidiao/p/6500720.html" target="_blank" rel="noopener">Kubernetes核心概念总结</a><br><br><a href="https://kubernetes.io/docs/concepts/" target="_blank" rel="noopener">k8s 概念</a><br><br><a href="http://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/" target="_blank" rel="noopener">Accessing Kubernetes Pods from Outside of the Cluster</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>k8s</category>
+      </categories>
+      <tags>
+        <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>helm -- kubernets 的包管理工具</title>
     <url>/2018/01/16/k8s/helm-md/</url>
     <content><![CDATA[<p>Helm 是 Kubernetes 的一个包管理工具，用来简化 Kubernetes 应用的部署和管理。可以把 Helm 比作 CentOS 的 yum 工具， 而我们的服务可以看作是 rpm 包。</p>
@@ -282,6 +1235,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Scrapy-入门教程</title>
+    <url>/2017/12/23/web-spider/scrapy-%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。<br>本系列所有文档均已基于 linux 操作系统<br><a id="more"></a></p>
+<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ pip <span class="keyword">install</span> Scrapy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>scrapy</category>
+      </categories>
+      <tags>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小游戏目录结构</title>
     <url>/2018/01/14/wechat_game/dir-structure-md/</url>
     <content><![CDATA[<p>本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。<br><a id="more"></a></p>
@@ -293,6 +1259,21 @@
 <p>源码分析：参考 <a href="https://segmentfault.com/a/1190000012646888" target="_blank" rel="noopener">segmentfault的一篇文章</a> </p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>wechat</category>
+      </categories>
+      <tags>
+        <tag>wechat_game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序开发工具 linux 运行</title>
+    <url>/2018/01/14/wechat_game/prepare/</url>
+    <content><![CDATA[<p>首先，微信小程序开发工具是用nw.js实现的，<a href="https://nwjs.io/" target="_blank" rel="noopener">nw.js</a>(直接从DOM中调用所有的Node.js模块)<br>本身是跨平台的，但是微信只出了开发工具的windows和mac版。<br>下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。<br><a id="more"></a></p>
+<h3 id="1-nw"><a href="#1-nw" class="headerlink" title="1.nw"></a>1.nw</h3><p>下载nwjs sdk（需要devtool的支援） 压缩包之后解压;</p>
+<h3 id="2-设置-path-变量；"><a href="#2-设置-path-变量；" class="headerlink" title="2.设置 path 变量；"></a>2.设置 path 变量；</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bashrc <span class="comment"># 视个人情况选择文件</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 加入步骤一中解压目录， </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如： <span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:/home/kk/Downloads/nwjs-sdk-v0.27.4-linux-x64"</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="3-package-nw"><a href="#3-package-nw" class="headerlink" title="3.package.nw"></a>3.package.nw</h3><p>在 windows 机器安装开发工具， 找到安装目录，将 package.nw 文件夹拷入 ubuntu 系统；</p>
+<h3 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行"></a>4.运行</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> package.nw</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nw .</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>wechat</category>
       </categories>
