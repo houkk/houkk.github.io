@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo-next</title>
+    <url>/2017/12/23/hexo-next/</url>
+    <content><![CDATA[<h2 id="使用-hexo-next-搭建-github-pages-注意事项"><a href="#使用-hexo-next-搭建-github-pages-注意事项" class="headerlink" title="使用 hexo - next 搭建 github pages 注意事项"></a>使用 hexo - next 搭建 github pages 注意事项</h2><p><code>next version</code>： <code>5.1.3</code></p>
+<p>文件内容只是一些比较碎的注意事项， 详细流程请参照： <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">next 官网</a><br><a id="more"></a></p>
+<h3 id="1-更换-next-主题"><a href="#1-更换-next-主题" class="headerlink" title="1. 更换 next 主题"></a>1. 更换 next 主题</h3><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init site_name <span class="comment"># 创建你的 hexo 项目目录</span></span><br><span class="line"><span class="variable">$ </span>cd site_name</span><br><span class="line"><span class="variable">$ </span>git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/iissnan</span><span class="regexp">/hexo-theme-next themes/next</span> <span class="comment"># 下载主题</span></span><br></pre></td></tr></table></figure>
+<p>此时，项目目录下有两个 _config.yml 配置文件：</p>
+<ol>
+<li>./_config.yml                       # <code>站点配置文件</code></li>
+<li>./themes/next/_config.yml # <code>主题配置文件</code><br>然后修改<code>站点配置文件</code> <strong>theme: next</strong> 即可</li>
+</ol>
+<h3 id="2-部署项目至-your-user-name-github-io"><a href="#2-部署项目至-your-user-name-github-io" class="headerlink" title="2.  部署项目至 your_user_name.github.io"></a>2.  部署项目至 your_user_name.github.io</h3><p>首先， 在 <code>github</code> 创建名为 <code>your_user_name.github.io</code> 的项目<br>然后， 在 <code>站点配置文件</code> 加入或配置</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/your_user_name/your_user_name.github.io.git</span></span><br></pre></td></tr></table></figure>
+<p>最后， 开始将 hexo 项目推至 github pages</p>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo <span class="keyword">generate</span></span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="3-域名配置"><a href="#3-域名配置" class="headerlink" title="3. 域名配置"></a>3. 域名配置</h3><p>两种方案：</p>
+<blockquote>
+<p>方案一： 在 your_user_name.github.io 项目中点击 <code>setting</code>, 配置 custom domain （缺点： 每次 deploy 需要重新配置）<br>方案二： 在 hexo 项目 source 目录下， 创建 CNAME 文件存储域名</p>
+</blockquote>
+<h3 id="4-静态文件存放"><a href="#4-静态文件存放" class="headerlink" title="4. 静态文件存放"></a>4. 静态文件存放</h3><p>由于每次 deploy 都会生成新的 ./.deploy 文件夹并推送至远端，所以类似 images、CNAME、README 文件都要放在 source 文件夹下， 否则将不会推送至远端。</p>
+<h3 id="5-文件内容头说明"><a href="#5-文件内容头说明" class="headerlink" title="5. 文件内容头说明"></a>5. 文件<code>内容头</code>说明</h3><p>在每篇文章的头部都会有说明信息供解析， 不多说， 看示例<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="number">-12</span><span class="number">-16</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">[test]</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="6-首页-read-more-设置"><a href="#6-首页-read-more-设置" class="headerlink" title="6. 首页 read more 设置"></a>6. 首页 <code>read more</code> 设置</h3><p>在 *.md 文件中加入 <code>&lt;!-- more --&gt;</code>， 自由控制显示内容， 其他方式不做推荐，不做介绍</p>
+<h3 id="7-语言设置"><a href="#7-语言设置" class="headerlink" title="7. 语言设置"></a>7. 语言设置</h3><p>语言设置最好设置固定语言（个人推荐）， 实测如果不设置，可能会出现乱七八槽的语言；<br><code>站点配置文件</code><br><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">language</span>: <span class="keyword">en</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="8-gitment"><a href="#8-gitment" class="headerlink" title="8. gitment"></a>8. gitment</h3><p>首先， 在 github <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">developer setting</a>  <code>Register a new OAuth application</code><br><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">application name <span class="meta"># 随意</span></span><br><span class="line">Homepage URL <span class="meta"># https:<span class="comment">//your_user_name.github.io || custom domain</span></span></span><br><span class="line">Authorization callback URL <span class="meta"># https:<span class="comment">//your_user_name.github.io || custom domain</span></span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>其中， 两个 URL 视需求而定， 暂不支持多URL；<br>创建后会生成 client_id、client_secret 供使用</p>
+</blockquote>
+<p>然后， 创建 一个项目 <code>gitment-comments</code> ， 项目名随意， 下面配置会用到，用来存储回复内容；<br>最后， 在 <code>主题配置文件</code>中配置：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitment:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mint:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">count:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">lazy:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">cleanly:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">language:</span> <span class="comment"># Force language, or auto switch by theme</span></span><br><span class="line">  <span class="attr">github_user:</span> <span class="comment"># your user name</span></span><br><span class="line">  <span class="attr">github_repo:</span> <span class="string">gitment-comments</span> <span class="comment"># 存储回复内容的项目名称</span></span><br><span class="line">  <span class="attr">client_id:</span> <span class="comment"># client_id</span></span><br><span class="line">  <span class="attr">client_secret:</span> <span class="comment"># client_secet</span></span><br><span class="line">  <span class="attr">proxy_gateway:</span> <span class="comment"># Address of api proxy, See: https://github.com/aimingoo/intersect</span></span><br><span class="line">  <span class="attr">redirect_protocol:</span> <span class="comment"># Protocol of redirect_uri with force_redirect_protocol when mint enabled</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="9-搜索功能推荐"><a href="#9-搜索功能推荐" class="headerlink" title="9. 搜索功能推荐"></a>9. 搜索功能推荐</h3><p>本文章推荐使用 local search</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-searchdb --save <span class="comment"># 安装插件</span></span><br></pre></td></tr></table></figure>
+<p><code>站点配置文件</code>（不做解释）：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure></p>
+<p><code>主题配置文件</code>：<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># if auto, trigger search by changing input</span></span><br><span class="line">  <span class="comment"># if manual, trigger search by pressing enter key or search button</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>promise 简单实现</title>
+    <url>/2018/01/27/promise-simple/</url>
+    <content><![CDATA[<p>Promise 简单实现，阅读<a href="https://www.jianshu.com/p/a89a8e5d6636" target="_blank" rel="noopener">深刻理解Promise系列</a>, 先上代码，个人理解后续。<br><a id="more"></a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promise</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> cbs = [];</span><br><span class="line">    <span class="keyword">let</span> state = <span class="string">'pending'</span>;</span><br><span class="line">    <span class="keyword">let</span> value = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(newValue &amp;&amp; (<span class="keyword">typeof</span>(newValue) === <span class="string">'object'</span>) &amp;&amp; (<span class="keyword">typeof</span>(newValue) === <span class="string">'function'</span>))&#123;</span><br><span class="line">            <span class="keyword">let</span> then = newValue.then;</span><br><span class="line">            then.call(newValue, resolve)</span><br><span class="line">        &#125;</span><br><span class="line">        state = <span class="string">'resolved'</span></span><br><span class="line">        value = newValue</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'in resolve '</span>)</span><br><span class="line">            </span><br><span class="line">            cbs.map(<span class="function"><span class="params">_cb</span> =&gt;</span> handle(_cb))</span><br><span class="line">        &#125;, <span class="number">0</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params">cb</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(state == <span class="string">'pending'</span>)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'in then: pending'</span>)</span><br><span class="line">            cbs.push(cb)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> ret = cb.cb(value);</span><br><span class="line">        <span class="keyword">if</span>(ret)&#123;</span><br><span class="line">            cb.resolve(ret)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cb.resolve(value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.then = <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">            handle(&#123;</span><br><span class="line">                cb: cb || <span class="literal">null</span>,</span><br><span class="line">                resolve: resolve</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fn(resolve)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">11</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'111 ---&gt; '</span>, a)</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        resolve(a)</span><br><span class="line">    &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'2222 ----&gt; '</span>, value)</span><br><span class="line">    &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3333 ----&gt; '</span>, value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考： <a href="https://www.jianshu.com/p/a89a8e5d6636" target="_blank" rel="noopener">深刻理解Promise系列</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>promise</category>
+      </categories>
+      <tags>
+        <tag>promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2017/12/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scrapy-入门教程</title>
+    <url>/2017/12/23/web-spider/scrapy-%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。<br>本系列所有文档均已基于 linux 操作系统<br><a id="more"></a></p>
+<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ pip <span class="keyword">install</span> Scrapy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>scrapy</category>
+      </categories>
+      <tags>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序开发工具 linux 运行</title>
+    <url>/2018/01/14/wechat_game/prepare/</url>
+    <content><![CDATA[<p>首先，微信小程序开发工具是用nw.js实现的，<a href="https://nwjs.io/" target="_blank" rel="noopener">nw.js</a>(直接从DOM中调用所有的Node.js模块)<br>本身是跨平台的，但是微信只出了开发工具的windows和mac版。<br>下面介绍 linux 系统如何运行开发工具， 以 ubuntu 为例。<br><a id="more"></a></p>
+<h3 id="1-nw"><a href="#1-nw" class="headerlink" title="1.nw"></a>1.nw</h3><p>下载nwjs sdk（需要devtool的支援） 压缩包之后解压;</p>
+<h3 id="2-设置-path-变量；"><a href="#2-设置-path-变量；" class="headerlink" title="2.设置 path 变量；"></a>2.设置 path 变量；</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bashrc <span class="comment"># 视个人情况选择文件</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 加入步骤一中解压目录， </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如： <span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:/home/kk/Downloads/nwjs-sdk-v0.27.4-linux-x64"</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="3-package-nw"><a href="#3-package-nw" class="headerlink" title="3.package.nw"></a>3.package.nw</h3><p>在 windows 机器安装开发工具， 找到安装目录，将 package.nw 文件夹拷入 ubuntu 系统；</p>
+<h3 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行"></a>4.运行</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> package.nw</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nw .</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>wechat</category>
+      </categories>
+      <tags>
+        <tag>wechat_game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kubernetes入门</title>
+    <url>/2018/01/15/k8s/k8s-first-md/</url>
+    <content><![CDATA[<p>首先， Kubernetes(k8s)是一个全新的基于容器(docker/Rocket)技术的分布式架构解决方案。其次，是一个开放的开发平台，不同的是没有限定任何变成接口、语言、框架，可以很简单的将系统映射为k8s的Service。最后， 是一个一站式的完备的分布式系统支撑平台，k8s具有完备的集群管理能力，包括多层次的安全防护和准入机制、多租户的应用支撑能力、透明的服务注册和发现机制、内建智能负载均衡器、故障发现和自我修复能力、服务滚动升级和在线扩容能力、可扩展的资源自动调度机制，以及多粒度的资源配额管理能力。同时提供了涵盖开发、部署测试、运维监控在内的各个环节的管理工具。<br><a id="more"></a></p>
+<h3 id="1-Master-主节点"><a href="#1-Master-主节点" class="headerlink" title="1. Master(主节点)"></a>1. Master(主节点)</h3><p>组成： <br><br>1）APIServer： 负责对外提供 RESTful 的 k8s API服务，它是系统管理指令的统一入口，任何对资源进行增删改查的操作都要交给APIServer处理后再提交给etcd<br><br>2）scheduler： 负责调度pod到合适的Node上<br><br>3）Controller manager： 负责管理资源控制器（每个资源一般都对应有一个控制器）<br><br>4）etcd： 存储各个资源的状态，从而实现了Restful的API<br></p>
+<h3 id="2-Node-节点"><a href="#2-Node-节点" class="headerlink" title="2. Node(节点)"></a>2. Node(节点)</h3><p>组成：<br><br>1）Runtime： 指的是容器运行环境<br><br>2）kube-proxy： 服务发现和反向代理功能<br><br>3）kubelet： 是Master在每个Node节点上面的agent， 负责维护和管理该Node上面的由k8s创建的所有容器<br></p>
+<p>创建过程：<br><br>1）创建： k8s在物理机、虚拟机或其他云服务资源上创建一个 node 对象， 并对其进行一系列健康检查（是否可以联通、服务是否正确启动、是否可以创建pod等），然后在集群中标记其状态。<br><br>1）管理： k8s master 通过 Node Controller 管理集群内 node 的信息同步、生命周期等；<br><br>1）注册: k8s 推荐自注册， 由 kubelet 向 Apiserver 注册自己， 也可以手动注册。<br></p>
+<h3 id="3-Pod"><a href="#3-Pod" class="headerlink" title="3. Pod"></a>3. Pod</h3><p>在 k8s 中， Pod 是其基本操作单元，也是应用运行的载体。Pod 包含一个或者多个相关的容器（<strong>可以看成应用层的逻辑宿主机</strong>）。Pod 可以认为是容器的一种延伸扩展，一个Pod也是一个隔离体，而Pod内部包含的一组容器又是共享的。除此之外，Pod中的容器可以访问共同的数据卷来实现文件系统的共享。</p>
+<blockquote>
+<p>Pod 同 docker 一样， 通过数据卷挂载来实现数据持久化（本地、网络等数据卷）。<br><br>Pod 封装 docker 的目的： docker 容器通信受 docker 网络机制限制（–link），通过 Pod 概念将容器组合在一个虚拟主机内，实现容器通过 localhost 通信（共享 PID 命名空间，网络命名空间，主机名，存储卷等，实现进程通信等）。<br></p>
+</blockquote>
+<p>Pod 定义： 通过Yaml或Json格式的配置文件来完成, 示例如下：<br><br><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">apiVersion</span>: v1</span><br><span class="line"><span class="attribute">kind</span>: Pod</span><br><span class="line"><span class="attribute">metadata</span>:</span><br><span class="line">    <span class="attribute">name</span>: redis-slave</span><br><span class="line">    <span class="attribute">labels</span>:</span><br><span class="line">        <span class="attribute">name</span>: redis-slave</span><br><span class="line"><span class="attribute">spec</span>:</span><br><span class="line">    <span class="attribute">containers</span>:</span><br><span class="line">    - <span class="attribute">name</span>: slave</span><br><span class="line">      <span class="attribute">image</span>: kubeguide/guestbook-redis-slave</span><br><span class="line">      command： [<span class="string">'sh'</span>]</span><br><span class="line">      <span class="attribute">env</span>:</span><br><span class="line">    - <span class="attribute">name</span>: GET_HOSTS_FROM</span><br><span class="line">      <span class="attribute">value</span>: env</span><br><span class="line">      <span class="attribute">ports</span>:</span><br></pre></td></tr></table></figure></p>
+<p>Pod 基本操作： <br><br>增：<code>kubectl create -f xxx.yaml</code><br><br>删： <code>kubectl delete pod yourPodName</code> <br><br>改： <code>kubectl replace /path/to/yourNewYaml.yaml</code><br><br>查： <code>kubectl get pod yourPodName</code>， <code>kubectl describe pod yourPodName</code> </p>
+<h3 id="4-Label"><a href="#4-Label" class="headerlink" title="4. Label"></a>4. Label</h3><p>Label定义如 Pod、Service、RC、Node 等对象的可识别属性（key/value 键值对），用来对它们进行管理和选择，可以如上面示例那样定义以供创建时附加到对象，也可以在对象创建后通过API进行管理。通过 <code>selector</code> 来进行 label 选择，进行资源之间的关联。<br><br>如下代码所示， 将该资源与 <code>name： redis-slave</code> 的资源进行关联。<br><figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">selector:</span></span><br><span class="line"><span class="symbol">  name:</span> redis-slave</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-Replication-Controller（RC）"><a href="#5-Replication-Controller（RC）" class="headerlink" title="5. Replication Controller（RC）"></a>5. Replication Controller（RC）</h3><p>用于定义 Pod 副本的数量， 在Master内，Controller Manager进程通过RC的定义来完成Pod的创建、监控、启停等操作。多停少启，保证集群中运行着用户期望的副本数量。<br><br>与 Pod 类似， 通过 yaml 或 json 配置文件来定义。示例如下， 相比 Pod 定义， <code>kind</code> 变为 ReplicationController， 另外多了 <code>replicas</code>， 以及 Label 选择器 <code>selector</code>。 同时在 <code>template</code> 中定义了 Pod， 由于 RC 特性，通常通过这种形式来创建资源。<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ReplicationController</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment"># template 内定义 Pod， </span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">redis-slave</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">slave</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">kubeguide/guestbook-redis-slave</span></span><br><span class="line">        <span class="string">command：</span> <span class="string">['sh']</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">GET_HOSTS_FROM</span></span><br><span class="line">        <span class="attr">value:</span> <span class="string">env</span></span><br><span class="line">        <span class="attr">ports:</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="6-Deployment"><a href="#6-Deployment" class="headerlink" title="6. Deployment"></a>6. Deployment</h3><blockquote>
+<p>后续发展中，出现了 Replica Set – 下一代Replication Controller。相比与 RC <code>selector</code> 的 key/value， RS 还支持集合操作（in,notin ..etc）,后续肯定会加入更多功能.<br>Deployment使用了Replica Set，是更高一层的概念。同时，与 RC 相比， Deployment 拥有更加灵活强大的升级、回滚功能。除非需要自定义升级功能或根本不需要升级 Pod，所以推荐使用 Deployment 而不直接使用Replica Set.<br><br>Deployment 的定义 与 RC 类似， 主要变化：<br><figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">apiVersion:</span> extensions/v1beta1</span><br><span class="line"><span class="symbol">kind:</span> Deployment</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="7-Service（服务）"><a href="#7-Service（服务）" class="headerlink" title="7. Service（服务）"></a>7. Service（服务）</h3><p>Service 是一种抽象概念，它定义了一个 Pod 逻辑集合以及访问它们的策略。Service 可以看作一组提供相同服务的 Pod 的对外访问接口， 即 Pod 组成的集群。在受到 RC 调控的时候，Pod副本是变化的，对应的虚拟 IP 也是变化的，但 Service 的 Cluster IP 地址是 Kubernetes 系统中的虚拟IP地址(虚拟IP的范围通过k8s API Server的启动参数 –service-cluster-ip-range=19.254.0.0/16配置)，由系统动态分配，在销毁该 Service 之前，这个 IP 地址都不会再变化了。<br>这样， Service就可以作为 Pod 的访问入口，起到代理服务器的作用（同时可以代理 k8s 外部的服务），而对于访问者来说，通过Service进行访问，无需直接感知 Pod。<br></p>
+<blockquote>
+<p>虚拟 IP 属于 k8s 内部的虚拟网络，外部是寻址不到的。在 k8s 系统中，实际上是由 k8s Proxy组件负责实现虚拟 IP 路由和转发的，所以k8s Node中都必须运行了k8s Proxy，从而在容器覆盖网络之上又实现了k8s层级的虚拟转发网络。<br><br>将服务发布至外部网络访问<a href="http://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/" target="_blank" rel="noopener">方式</a><br></p>
+</blockquote>
+<p>由于 pod 会随时销毁重建， 所以 k8s 会根据 Service 关联到 Pod 的 PodIP 信息组合成一个 Endpoints，用来相互衔接， 并且 Endpoints 会随着 pod 的变化而变化</p>
+<h3 id="8-Volume（存储卷）"><a href="#8-Volume（存储卷）" class="headerlink" title="8. Volume（存储卷）"></a>8. Volume（存储卷）</h3><p>k8s 的 Volume 概念与 Docker 的 Volume 比较类似，但不完全相同， 有<code>本地</code>、<code>网络</code>、<code>信息</code>等几种类型的数据卷。</p>
+<h3 id="9-简单创建资源流程"><a href="#9-简单创建资源流程" class="headerlink" title="9. 简单创建资源流程"></a>9. 简单创建资源流程</h3><p>假设有 <code>Deployment</code> 定义文件 <code>deployment-demo.yaml</code> 和 <code>Service</code> 定义文件 <code>service-demo.yaml</code><br><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ kubectl create deployment-demo.yaml # 创建控制器和 Pod</span><br><span class="line">$ kubectl create service-demo.yaml    # 创建<span class="built_in"> service </span>和 endpoints</span><br><span class="line">$ kubectl <span class="builtin-name">get</span> all                     # 查看所有资源信息</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参考： <br><br><a href="https://www.jianshu.com/p/63ffc2214788" target="_blank" rel="noopener">kubernetes入门</a><br><br><a href="https://www.cnblogs.com/zhenyuyaodidiao/p/6500720.html" target="_blank" rel="noopener">Kubernetes核心概念总结</a><br><br><a href="https://kubernetes.io/docs/concepts/" target="_blank" rel="noopener">k8s 概念</a><br><br><a href="http://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/" target="_blank" rel="noopener">Accessing Kubernetes Pods from Outside of the Cluster</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>k8s</category>
+      </categories>
+      <tags>
+        <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Debezium 介绍</title>
+    <url>/2020/05/28/debezium/simple-intro/</url>
+    <content><![CDATA[<ul>
+<li>分布式 CDC 服务</li>
+<li>生成数据库行级变化事件流的分布式平台</li>
+<li>基于 kafka connect</li>
+</ul>
+<blockquote>
+<p>项目很好, 问题修复非常及时<br>大体构成: debezium( connector( task))</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>kafka connect 的 CDC 架构如下</p>
+</blockquote>
+<p><img src="https://personal-1258258052.cos.ap-shanghai.myqcloud.com/debezium/debezium_arch.png" alt="基于 kafka connect 的 CDC 流转"></p>
+<blockquote>
+<p>debezium 就是对 kafka connect 进行包装, 并实现了上图读取数据库变更部分<br>所以, 建议先了解 <a href="https://docs.confluent.io/current/connect/index.html" target="_blank" rel="noopener">kafka connect</a>, 默认已有所了解</p>
+</blockquote>
+<h2 id="1-构成"><a href="#1-构成" class="headerlink" title="1. 构成"></a>1. 构成</h2><ul>
+<li>debezium 集群<ul>
+<li>没有仔细研究, 内置 leader 选举算法, 不需要过多关注</li>
+<li>connector<ul>
+<li>功能上是 CDC 的功能实现 (debezium 推出了多种数据库的 connector 实现)</li>
+<li>架构上是 CDC 任务的管理者</li>
+</ul>
+</li>
+<li>task<ul>
+<li>CDC 的执行者</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>kafka 集群<ul>
+<li>存储 debezium 的一系列信息<ul>
+<li>config topic: connctor 配置信息</li>
+<li>status topic: connector、task 的运行状态</li>
+<li>offset topic: cdc 对于数据库的 offset 信息 (比如 mysql binlog 的 pos gtid 等)</li>
+</ul>
+</li>
+<li>CDC 数据<ul>
+<li>内置 kafka 的 sink, 直接落地 kafka, 为后续的操作提供方便</li>
+<li>表和 topic 一对一</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-功能特点"><a href="#2-功能特点" class="headerlink" title="2. 功能特点"></a>2. 功能特点</h2><ul>
+<li>保证捕获所有变更<ul>
+<li>以 binlog row 模式为例, 只要 binlog 不丢, 就可以保证捕获所有变更</li>
+</ul>
+</li>
+<li>低延迟</li>
+<li>Snapshots<ul>
+<li>已有数据的 snapshot</li>
+<li>个人建议不要理会这个, 感觉这功能放在 CDC 中不太合适</li>
+</ul>
+</li>
+<li>Filters<ul>
+<li>自定义 db table column 的过滤</li>
+</ul>
+</li>
+<li>服务性能监控<ul>
+<li>JMX, 这个没什么好说的</li>
+</ul>
+</li>
+<li>消息转换<ul>
+<li>没了解过啊, 有兴趣的同学可以试试</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-主要原理"><a href="#3-主要原理" class="headerlink" title="3. 主要原理"></a>3. 主要原理</h2><blockquote>
+<p>简单的介绍一下 debezium 的 CDC 是怎么做的:<br>基于数据库本身的逻辑记录和备份机制来实现的</p>
+</blockquote>
+<p>举几个例子</p>
+<ul>
+<li>Mysql<ul>
+<li>binlog(row)</li>
+</ul>
+</li>
+<li>pg<ul>
+<li>wal(logic)</li>
+<li>Replication Slot</li>
+</ul>
+</li>
+<li>mongodb<ul>
+<li>oplog</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>所以, 就是逻辑重放</p>
+</blockquote>
+<h2 id="4-数据库支持"><a href="#4-数据库支持" class="headerlink" title="4. 数据库支持"></a>4. 数据库支持</h2><blockquote>
+<p>提供了多种数据库的支持</p>
+</blockquote>
+<ul>
+<li>Mysql</li>
+<li>MongoDB</li>
+<li>PostgreSql</li>
+<li>Oracle</li>
+<li>Sql Server</li>
+<li>Db2</li>
+<li>Cassandra</li>
+</ul>
+<h2 id="5-Demo"><a href="#5-Demo" class="headerlink" title="5. Demo"></a>5. Demo</h2><p><a href="https://debezium.io/documentation/reference/1.1/tutorial.html" target="_blank" rel="noopener">Debezium 官网</a></p>
+]]></content>
+      <categories>
+        <category>Debezium</category>
+      </categories>
+      <tags>
+        <tag>Debezium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>helm -- kubernets 的包管理工具</title>
+    <url>/2018/01/16/k8s/helm-md/</url>
+    <content><![CDATA[<p>Helm 是 Kubernetes 的一个包管理工具，用来简化 Kubernetes 应用的部署和管理。可以把 Helm 比作 CentOS 的 yum 工具， 而我们的服务可以看作是 rpm 包。</p>
+<a id="more"></a>
+<h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><p>1）Chart: 是 Helm 管理的安装包，里面包含需要部署的安装包资源<br><br>2）Release：是 chart 的部署实例，一个 chart 在一个 Kubernetes 集群上可以有多个 release，即这个 chart 可以被安装多次<br><br>3）Repository：chart 的仓库，用于发布和存储 chart<br></p>
+<h3 id="2-组成"><a href="#2-组成" class="headerlink" title="2. 组成"></a>2. 组成</h3><p>Helm 是 C/S 架构， 有 client 和 server 构成。<br><br><code>tiller</code>(server): 运行在 Kubernetes 集群上;<br><br><code>helm</code>(client,命令行工具)：可在本地运行，一般运行在CI/CD Server上</p>
+<h3 id="3-安装-和-初始化"><a href="#3-安装-和-初始化" class="headerlink" title="3. 安装 和 初始化"></a>3. 安装 和 初始化</h3><p>安装教程， 以及初始化教程， 可以参考 <a href="https://github.com/kubernetes/helm/blob/master/docs/install.md" target="_blank" rel="noopener">helm github install.md</a></p>
+<h3 id="4-role-based-access-control-基于角色的访问控制"><a href="#4-role-based-access-control-基于角色的访问控制" class="headerlink" title="4. role-based access control(基于角色的访问控制)"></a>4. role-based access control(基于角色的访问控制)</h3><p>在 Kubernetes 1.8，Kubernetes APIServer 正式开启了RBAC访问控制，所以我们需要创建 tiller 使用的service account: tiller 并分配合适的角色给它。本文不多做说明， 关于如何配置请参考<a href="https://docs.helm.sh/using_helm/#role-based-access-control" target="_blank" rel="noopener">tiller and RBAC</a>。至于 RBAC， 可以参考 <a href="https://coreos.com/blog/hands-on-with-rbac-in-kubernetes-1.8" target="_blank" rel="noopener">Hands on with RBAC in Kubernetes 1.8</a></p>
+<h3 id="5-基本使用"><a href="#5-基本使用" class="headerlink" title="5. 基本使用"></a>5. 基本使用</h3><h4 id="5-1-创建-chart"><a href="#5-1-创建-chart" class="headerlink" title="5.1 创建 chart"></a>5.1 创建 chart</h4><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">$ helm tree hello-world </span><br><span class="line">hello-world</span><br><span class="line">├── charts</span><br><span class="line">├── Chart.yaml</span><br><span class="line">├── templates</span><br><span class="line">│   ├── deployment.yaml</span><br><span class="line">│   ├── _helpers.tpl</span><br><span class="line">│   ├── ingress.yaml</span><br><span class="line">│   ├── NOTES.txt</span><br><span class="line">│   └── service.yaml</span><br><span class="line">└── values.yaml</span><br><span class="line"></span><br><span class="line"><span class="number">2</span> directories, <span class="number">7</span> files</span><br></pre></td></tr></table></figure>
+<ol><br><li>charts: 本chart依赖的chart，当前是空的;</li><br><li>Chart.yaml: 基本信息<br><br><br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">A</span> <span class="string">Helm</span> <span class="string">chart</span> <span class="string">for</span> <span class="string">Kubernetes</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">microservice</span></span><br><span class="line"><span class="attr">version:</span> <span class="number">0.1</span><span class="number">.0</span></span><br></pre></td></tr></table></figure><br><br></li><br><li>templates: 资源定义文件（serverce， deployment ..etc）</li><br><li>values.yaml: chart 配置默认值， 在 templates 文件中调用</li><br></ol>
+
+<h4 id="5-2-安装"><a href="#5-2-安装" class="headerlink" title="5.2 安装"></a>5.2 安装</h4><p>直接在上文创建出来的 <code>hello-world</code> chat 目录下， 执行<br><br><code>helm install ./</code><br>查看 release：<br><br><code>helm list</code><br>删除 release： <br><br><code>helm delete release-name</code></p>
+<h4 id="5-3-打包分发"><a href="#5-3-打包分发" class="headerlink" title="5.3 打包分发"></a>5.3 打包分发</h4><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">$ helm <span class="keyword">package</span> ./</span><br><span class="line">Successfully packaged chart and saved it <span class="string">to:</span> <span class="regexp">/home/</span>work<span class="regexp">/kube/</span>helm<span class="regexp">/hello-world/</span>hello-world<span class="number">-0.1</span><span class="number">.0</span>.tgz</span><br></pre></td></tr></table></figure>
+<p>同样可以根据此 tgz 包来进行安装、回滚、升级<br><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ helm install hello-world-0.1.0.tgz</span><br><span class="line">$ helm rollback releasename 1 # releasename 由 helm list 获得， 回滚前一个版本</span><br><span class="line">$ helm<span class="built_in"> upgrade </span>releasename .  # 更新过 chart 并且 package 后，<span class="built_in"> upgrade </span>替代 install 命令， 进行更新</span><br></pre></td></tr></table></figure></p>
+<p>参考：<br><br><a href="https://www.kubernetes.org.cn/3435.html" target="_blank" rel="noopener">是时候使用Helm了：Helm, Kubernetes的包管理工具</a><br><br><a href="https://docs.helm.sh/using_helm/#role-based-access-control" target="_blank" rel="noopener">TILLER AND ROLE-BASED ACCESS CONTROL</a><br><br><a href="https://github.com/kubernetes/helm/tree/master/docs" target="_blank" rel="noopener">helm github docs</a><br><br><a href="https://daemonza.github.io/2017/02/20/using-helm-to-deploy-to-kubernetes/" target="_blank" rel="noopener">Using Helm to deploy to Kubernetes</a><br></p>
+]]></content>
+      <categories>
+        <category>k8s</category>
+      </categories>
+      <tags>
+        <tag>helm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小游戏目录结构</title>
+    <url>/2018/01/14/wechat_game/dir-structure-md/</url>
+    <content><![CDATA[<p>本文主要讲述， 如何快速创建一个小游戏项目并且针对其目录结构进行简单讲解。<br><a id="more"></a></p>
+<h3 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h3><p>首先新建项目，目前小游戏不提供公开注册，可点击体验小游戏使用无 AppID 模式（创建时如果建立快速启动模板，需要选择一个空的目录）。<img src="../../../../../images/wechat_game/createProject.jpg" alt></p>
+<h3 id="2-微信预览"><a href="#2-微信预览" class="headerlink" title="2. 微信预览"></a>2. 微信预览</h3><p>选择建立快速启动模板后，将会生成一个小游戏项目，并在开发工具中打开，这时点击开发工具右上角的预览按钮，会生成对应二维码，微信扫码即可。<br><img src="../../../../../images/wechat_game/yulan.jpg" alt> </p>
+<h3 id="3-目录结构"><a href="#3-目录结构" class="headerlink" title="3. 目录结构"></a>3. 目录结构</h3><p><code>./audio</code>: 音频目录文件 <br><br><code>./images</code>: 图片文件目录 <br><br><code>./js</code>: 主要源代码目录 <br><br><code>./game.js</code>: 主入口文件 <br><br><code>./game.json</code>: 配置文件</p>
+<figure class="highlight xl"><table><tr><td class="code"><pre><span class="line">./js</span><br><span class="line">├── base                                   <span class="comment">// 定义游戏开发基础类</span></span><br><span class="line">│   ├── animatoin.js                       <span class="comment">// 帧动画的简易实现</span></span><br><span class="line">│   ├── pool.js                            <span class="comment">// 对象池的简易实现</span></span><br><span class="line">│   └── sprite.js                          <span class="comment">// 游戏基本元素精灵类</span></span><br><span class="line">├── libs</span><br><span class="line">│   ├── <span class="keyword">symbol</span>.js                          <span class="comment">// ES6 Symbol简易兼容</span></span><br><span class="line">│   └── weapp-adapter.js                   <span class="comment">// 小游戏适配器</span></span><br><span class="line">├── npc</span><br><span class="line">│   └── enemy.js                           <span class="comment">// 敌机类</span></span><br><span class="line">├── player</span><br><span class="line">│   ├── bullet.js                          <span class="comment">// 子弹类</span></span><br><span class="line">│   └── index.js                           <span class="comment">// 玩家类</span></span><br><span class="line">├── runtime</span><br><span class="line">│   ├── <span class="built_in">background</span>.js                      <span class="comment">// 背景类</span></span><br><span class="line">│   ├── gameinfo.js                        <span class="comment">// 用于展示分数和结算界面</span></span><br><span class="line">│   └── music.js                           <span class="comment">// 全局音效管理器</span></span><br><span class="line">├── databus.js                             <span class="comment">// 管控游戏状态</span></span><br><span class="line">└── main.js                                <span class="comment">// 游戏入口主函数</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>源码分析：参考 <a href="https://segmentfault.com/a/1190000012646888" target="_blank" rel="noopener">segmentfault的一篇文章</a> </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>wechat</category>
+      </categories>
+      <tags>
+        <tag>wechat_game</tag>
+      </tags>
+  </entry>
+</search>
