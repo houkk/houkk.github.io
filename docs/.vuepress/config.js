@@ -29,5 +29,8 @@ module.exports = {
   plugins: [
     '@vuepress/back-to-top',
     '@vuepress/medium-zoom'
+  ],
+  head: [
+    ['link', { rel: 'icon', href: `/avatar-small.png` }]
   ]
 }
