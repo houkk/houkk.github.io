@@ -23,7 +23,7 @@ module.exports = {
     sidebar: {
       '/debezium/': ['', 'mysql', 'pg', 'mongo', 'debezium_docker'],
       '/k8s/': ['k8s-first', 'helm'],
-      '/node/': ['', 'promise-simple']
+      '/node/': ['', 'promise-simple', 'various-custome']
     }
   },
   plugins: [
