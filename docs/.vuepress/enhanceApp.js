@@ -63,6 +63,7 @@ function integrateGitment(router) {
       oauth: {
         client_id: '3d23b415fd147ed595de', // 第一步注册 OAuth application 后获取到的 Client ID
         client_secret: 'e2cc5195a36c7101d4dabe0433f110c3db2c8539', // 第一步注册 OAuth application 后获取到的 Clien Secret
+        redirect_uri: 'http://blog.hkprivate.cn'
       },
     })
     gitment.render('comments-container')
