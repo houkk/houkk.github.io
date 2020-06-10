@@ -28,7 +28,19 @@ module.exports = {
   },
   plugins: [
     '@vuepress/back-to-top',
-    '@vuepress/medium-zoom'
+    '@vuepress/medium-zoom',
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'valine', 
+        // options选项中的所有参数，会传给Valine的配置
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: 'UaP5KWbGUSwOKBMgmFnGywTl-gzGzoHsz',
+          appKey: 'Azu2IA1igSUe3zlFhBi2DgPp'
+        }
+      }
+    ]
   ],
   head: [
     ['link', { rel: 'icon', href: `/avatar-small.png` }]
