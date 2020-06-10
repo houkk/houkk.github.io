@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>promise 简单实现 | kk</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.c2a81b57.css" as="style"><link rel="preload" href="/assets/js/app.4d378f4b.js" as="script"><link rel="preload" href="/assets/js/2.1929b807.js" as="script"><link rel="preload" href="/assets/js/14.597e44f9.js" as="script"><link rel="prefetch" href="/assets/js/10.15d9cf65.js"><link rel="prefetch" href="/assets/js/11.696d9b0c.js"><link rel="prefetch" href="/assets/js/12.f68282f5.js"><link rel="prefetch" href="/assets/js/13.ec2be260.js"><link rel="prefetch" href="/assets/js/3.417feb07.js"><link rel="prefetch" href="/assets/js/4.fadff749.js"><link rel="prefetch" href="/assets/js/5.e383a2ef.js"><link rel="prefetch" href="/assets/js/6.6f0f1e4d.js"><link rel="prefetch" href="/assets/js/7.018643ed.js"><link rel="prefetch" href="/assets/js/8.07fbfbf0.js"><link rel="prefetch" href="/assets/js/9.47201ab2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c2a81b57.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar-small.png" alt="kk" class="logo"> <span class="site-name can-hide">kk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/node/" class="nav-link router-link-active">
+  Node.js
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CDC" class="dropdown-title"><span class="title">CDC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/debezium/" class="nav-link">
+  Debezium
+</a></li></ul></div></div><div class="nav-item"><a href="/k8s/k8s-first.html" class="nav-link">
+  k8s
+</a></div><div class="nav-item"><a href="https://github.com/houkk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/node/" class="nav-link router-link-active">
+  Node.js
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CDC" class="dropdown-title"><span class="title">CDC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/debezium/" class="nav-link">
+  Debezium
+</a></li></ul></div></div><div class="nav-item"><a href="/k8s/k8s-first.html" class="nav-link">
+  k8s
+</a></div><div class="nav-item"><a href="https://github.com/houkk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/node/" aria-current="page" class="sidebar-link">Node.js</a></li><li><a href="/node/promise-simple.html" aria-current="page" class="active sidebar-link">promise 简单实现</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>Promises 的简单实现, 纯代码
+</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>看了一下其他的, 感觉和我的不太一样啊 😂 。。。。。。 <br>
+有时间仔细研究下怎么回事</p></div> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> states <span class="token operator">=</span> <span class="token punctuation">{</span>
+  pending<span class="token operator">:</span> <span class="token string">'Pending'</span><span class="token punctuation">,</span>
+  resolved<span class="token operator">:</span> <span class="token string">'Resolved'</span><span class="token punctuation">,</span>
+  rejected<span class="token operator">:</span> <span class="token string">'Rejected'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyPromise</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token parameter">fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> states<span class="token punctuation">.</span>pending
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers <span class="token operator">=</span> <span class="token punctuation">{</span>
+      onResolve<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      onReject<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      childResolve<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      childReject<span class="token operator">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_resolve</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_reject</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 处理 fn 报错</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">_resolve</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'TypeError'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">===</span> states<span class="token punctuation">.</span>rejected<span class="token punctuation">)</span> <span class="token keyword">return</span>
+
+    <span class="token comment">// value is object(... or promise) function</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> then <span class="token operator">=</span> value<span class="token punctuation">.</span>then
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> then <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 遵循 value-promise 的状态流转, 将当前的 this.thenHandler 处理放在 value-then 中处理</span>
+        <span class="token comment">//! 一定要不要忘记 _reject 函数, 不然当 value-promise 中报错且没有 catch 函数时, 将会无法捕捉</span>
+        <span class="token function">then</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_resolve</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_reject</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 确保 onResolve, onReject 处理都在下一个时间循环中</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> states<span class="token punctuation">.</span>resolved
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_handle</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>onResolve<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>childResolve<span class="token punctuation">,</span>
+        value
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">_handle</span> <span class="token punctuation">(</span><span class="token parameter">cb<span class="token punctuation">,</span> childCb<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>childCb<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token comment">// promise 链到此为止</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cb <span class="token operator">||</span> <span class="token keyword">typeof</span> cb <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 没有提供 onResolve/onReject, 或者不是函数, 值穿透</span>
+      <span class="token function">childCb</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> res2 <span class="token operator">=</span> <span class="token function">cb</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span><span class="token function">childResolve</span><span class="token punctuation">(</span>res2<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span><span class="token function">childReject</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">_reject</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">===</span> states<span class="token punctuation">.</span>resolved<span class="token punctuation">)</span> <span class="token keyword">return</span>
+
+    err <span class="token operator">=</span> err <span class="token operator">||</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'promise rejected'</span><span class="token punctuation">)</span>
+
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 确保 状态变更, onResolve, onReject 处理都在下一个事件循环中, 方便 then catch 的赋值</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> states<span class="token punctuation">.</span>rejected
+      <span class="token comment">// 注意这个 onReject</span>
+      <span class="token comment">// 我们通常使用 then (onResolve, onReject), 是不会提供 onReject 函数的</span>
+      <span class="token comment">// 这种情况, 在 _handle 中, 就直接跳过处理了</span>
+      <span class="token comment">// console.log('this thenhandler onRject ====&gt; ', this.thenHandlers)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_handle</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>onReject<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>childReject<span class="token punctuation">,</span>
+        err
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">catch</span> <span class="token punctuation">(</span>onError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 处理报错, 本质还是 then, 仅提供前面流程中对 reject 抛错的接收函数</span>
+    <span class="token comment">// 注意: onError 接收到的是 err 信息, 如果在 onError 中不继续 throw 的话, 将会进入 resolve 流程</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> onError<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">then</span> <span class="token punctuation">(</span><span class="token parameter">onResolve<span class="token punctuation">,</span> onReject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 要求返回 promise</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyPromise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 既然返回了新实例, 那就在当前实例 resolve/reject 后调用子实例的 resolve/reject</span>
+      <span class="token comment">// 即实例嵌套, 当前实例调用子实例的 (child)resolve, (child)reject 函数</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>onResolve <span class="token operator">=</span> onResolve
+      <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>onReject <span class="token operator">=</span> onReject
+
+      <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>childResolve <span class="token operator">=</span> resolve
+      <span class="token keyword">this</span><span class="token punctuation">.</span>thenHandlers<span class="token punctuation">.</span>childReject <span class="token operator">=</span> reject
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">finally</span> <span class="token punctuation">(</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fn <span class="token operator">||</span> <span class="token keyword">typeof</span> fn <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 和 callback 类似, 不同的是不知道状态, 不接受参数, 保留原输出或报错</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+      <span class="token parameter">v</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> MyPromise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> v<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> MyPromise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">throw</span> e
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">static</span> <span class="token function">resolve</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if (value instanceof MyPromise) return value</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value<span class="token punctuation">.</span>then <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> then <span class="token operator">=</span> value<span class="token punctuation">.</span>then
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyPromise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">then</span><span class="token punctuation">(</span>resolve<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyPromise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>value <span class="token operator">?</span> <span class="token function">resolve</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">static</span> <span class="token function">reject</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if (value instanceof MyPromise) return value</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value<span class="token punctuation">.</span>then <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// thenable</span>
+      <span class="token keyword">const</span> then <span class="token operator">=</span> value<span class="token punctuation">.</span>then
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyPromise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">then</span><span class="token punctuation">(</span>reject<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    value <span class="token operator">=</span> value <span class="token operator">||</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'promise rejected'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyPromise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">reject</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br></div></div><blockquote><p>参考： <a href="https://www.ituring.com.cn/article/66566" target="_blank" rel="noopener noreferrer">【翻译】Promises/A+规范<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">6/10/2020, 10:26:29 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/node/" class="prev router-link-active">
+        Node.js
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.4d378f4b.js" defer></script><script src="/assets/js/2.1929b807.js" defer></script><script src="/assets/js/14.597e44f9.js" defer></script>
+  </body>
+</html>

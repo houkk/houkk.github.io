@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Debezium 介绍 | kk</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/assets/css/0.styles.c2a81b57.css" as="style"><link rel="preload" href="/assets/js/app.4d378f4b.js" as="script"><link rel="preload" href="/assets/js/2.1929b807.js" as="script"><link rel="preload" href="/assets/js/6.6f0f1e4d.js" as="script"><link rel="prefetch" href="/assets/js/10.15d9cf65.js"><link rel="prefetch" href="/assets/js/11.696d9b0c.js"><link rel="prefetch" href="/assets/js/12.f68282f5.js"><link rel="prefetch" href="/assets/js/13.ec2be260.js"><link rel="prefetch" href="/assets/js/14.597e44f9.js"><link rel="prefetch" href="/assets/js/3.417feb07.js"><link rel="prefetch" href="/assets/js/4.fadff749.js"><link rel="prefetch" href="/assets/js/5.e383a2ef.js"><link rel="prefetch" href="/assets/js/7.018643ed.js"><link rel="prefetch" href="/assets/js/8.07fbfbf0.js"><link rel="prefetch" href="/assets/js/9.47201ab2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c2a81b57.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar-small.png" alt="kk" class="logo"> <span class="site-name can-hide">kk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  Node.js
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CDC" class="dropdown-title"><span class="title">CDC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/debezium/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Debezium
+</a></li></ul></div></div><div class="nav-item"><a href="/k8s/k8s-first.html" class="nav-link">
+  k8s
+</a></div><div class="nav-item"><a href="https://github.com/houkk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  Node.js
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CDC" class="dropdown-title"><span class="title">CDC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/debezium/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Debezium
+</a></li></ul></div></div><div class="nav-item"><a href="/k8s/k8s-first.html" class="nav-link">
+  k8s
+</a></div><div class="nav-item"><a href="https://github.com/houkk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/debezium/" aria-current="page" class="active sidebar-link">Debezium 介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/debezium/#_1-构成" class="sidebar-link">1. 构成</a></li><li class="sidebar-sub-header"><a href="/debezium/#_2-功能特点" class="sidebar-link">2. 功能特点</a></li><li class="sidebar-sub-header"><a href="/debezium/#_3-主要原理" class="sidebar-link">3. 主要原理</a></li><li class="sidebar-sub-header"><a href="/debezium/#_4-数据库支持" class="sidebar-link">4. 数据库支持</a></li><li class="sidebar-sub-header"><a href="/debezium/#_5-demo" class="sidebar-link">5. Demo</a></li></ul></li><li><a href="/debezium/mysql.html" class="sidebar-link">Mysql Connector</a></li><li><a href="/debezium/pg.html" class="sidebar-link">PostgreSql Connector</a></li><li><a href="/debezium/mongo.html" class="sidebar-link">Mongo Connector</a></li><li><a href="/debezium/debezium_docker.html" class="sidebar-link">Debezium docker 形式部署</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>分布式 CDC 服务</li> <li>生成数据库行级变化事件流的分布式平台</li> <li>基于 kafka connect</li> <li>位于 kafka 和 其他数据系统之间的数据工具, 内置 producer 和 consumer 接口, 提供插件模式(供使用者自定义开发 connector、converter等, 将数据导入导出 kafka、格式化等)</li></ul></div> <blockquote><p>项目很好, 问题修复非常及时
+大体构成: debezium( connector( task))</p></blockquote> <blockquote><p>kafka connect 的 CDC 架构如下</p></blockquote> <p><img src="https://personal-1258258052.cos.ap-shanghai.myqcloud.com/debezium/debezium_arch.png" alt="基于 kafka connect 的 CDC 流转"></p> <blockquote><p>debezium 就是对 kafka connect 进行包装, 并实现了上图读取数据库变更部分
+所以, 建议先了解 <a href="https://docs.confluent.io/current/connect/index.html" target="_blank" rel="noopener noreferrer">kafka connect<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, 默认已有所了解</p></blockquote> <h2 id="_1-构成"><a href="#_1-构成" class="header-anchor">#</a> 1. 构成</h2> <ul><li>debezium 集群
+<ul><li>没有仔细研究, 内置 leader 选举算法, 不需要过多关注</li> <li>connector
+<ul><li>功能上是 CDC 的功能实现 (debezium 推出了多种数据库的 connector 实现)</li> <li>架构上是 CDC 任务的管理者</li></ul></li> <li>task
+<ul><li>CDC 的执行者</li></ul></li></ul></li> <li>kafka 集群
+<ul><li>存储 debezium 的一系列信息
+<ul><li>config topic: connctor 配置信息</li> <li>status topic: connector、task 的运行状态</li> <li>offset topic: cdc 对于数据库的 offset 信息 (比如 mysql binlog 的 pos gtid 等)</li></ul></li> <li>CDC 数据
+<ul><li>内置 kafka 的 sink, 直接落地 kafka, 为后续的操作提供方便</li> <li>表和 topic 一对一</li></ul></li></ul></li></ul> <h2 id="_2-功能特点"><a href="#_2-功能特点" class="header-anchor">#</a> 2. 功能特点</h2> <ul><li>保证捕获所有变更
+<ul><li>以 binlog row 模式为例, 只要 binlog 不丢, 就可以保证捕获所有变更</li></ul></li> <li>低延迟</li> <li>Snapshots
+<ul><li>已有数据的 snapshot</li> <li>个人建议不要理会这个, 感觉这功能放在 CDC 中不太合适</li></ul></li> <li>Filters
+<ul><li>自定义 db table column 的过滤</li></ul></li> <li>服务性能监控
+<ul><li>JMX, 这个没什么好说的</li></ul></li> <li>消息转换
+<ul><li>没了解过啊, 有兴趣的同学可以试试</li></ul></li></ul> <h2 id="_3-主要原理"><a href="#_3-主要原理" class="header-anchor">#</a> 3. 主要原理</h2> <blockquote><p>简单的介绍一下 debezium 的 CDC 是怎么做的:
+基于数据库本身的逻辑记录和备份机制来实现的</p></blockquote> <p>举几个例子</p> <ul><li>Mysql
+<ul><li>binlog(row)</li></ul></li> <li>pg
+<ul><li>wal(logic)</li> <li>Replication Slot</li></ul></li> <li>mongodb
+<ul><li>oplog</li></ul></li></ul> <blockquote><p>所以, 就是逻辑重放</p></blockquote> <h2 id="_4-数据库支持"><a href="#_4-数据库支持" class="header-anchor">#</a> 4. 数据库支持</h2> <blockquote><p>提供了多种数据库的支持</p></blockquote> <ul><li>Mysql</li> <li>MongoDB</li> <li>PostgreSql</li> <li>Oracle</li> <li>Sql Server</li> <li>Db2</li> <li>Cassandra</li></ul> <h2 id="_5-demo"><a href="#_5-demo" class="header-anchor">#</a> 5. Demo</h2> <p><a href="https://debezium.io/documentation/reference/1.1/tutorial.html" target="_blank" rel="noopener noreferrer">Debezium 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">6/10/2020, 10:26:29 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/debezium/mysql.html">
+        Mysql Connector
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.4d378f4b.js" defer></script><script src="/assets/js/2.1929b807.js" defer></script><script src="/assets/js/6.6f0f1e4d.js" defer></script>
+  </body>
+</html>
