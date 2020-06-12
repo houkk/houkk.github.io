@@ -169,8 +169,8 @@ const compose = async function (middleWares) {
 ```
 ## 8. async await 的简单实现
 
-理论上 async await 比 co 多了点东西, 但是没有仔细研究, 模仿 co 简单实现了一下 😄; <br>
-而且砍掉了一部分, 支持了 promise 😸; <br>
+理论上 async await 和 co 应该差不错, 但是没有仔细研究, 模仿 co 简单实现了一下 😄; <br>
+而且根据 async/await 的返回值砍掉了一部分, 只支持 promise 😸; <br>
 
 ::: warning
 但是学到了很关键的一点: <br>
