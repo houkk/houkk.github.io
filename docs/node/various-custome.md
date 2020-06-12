@@ -167,3 +167,91 @@ const compose = async function (middleWares) {
   await run(middleWares)
 }
 ```
+## 8. async await 的简单实现
+
+理论上 async await 比 co 多了点东西, 但是没有仔细研究, 模仿 co 简单实现了一下 😄; <br>
+而且砍掉了一部分, 支持了 promise 😸; <br>
+
+::: warning
+但是学到了很关键的一点: <br>
+原来 `Generator.prototype.throw()` 的处理, 才是 await 后的抛错, 可以被 `try catch` 捕捉的原因
+:::
+
+关于这个 throw 无论有没有理解错, 但始终没搞明白到底怎么回事, 应该需要研究一下 generator 才能搞明白
+
+``` js
+function * test (num) {
+  console.log('start')
+  const a = yield 1
+  // const a = yield (() => { throw new Error('next error') })()
+  console.log('a =====> ', num, a)
+  const b = yield delay(undefined, 100000, num)
+  console.log('b =====> ', num, b)
+  console.log('end')
+  return num + 10
+}
+
+function delay (time = 2000, result, num) {
+  console.log(`start delay ${time} ======= `, num, new Date())
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(`end delay ${time} ======= `, num, new Date())
+      resolve(result)
+      // reject(new Error('vlaue error'))
+    }, time)
+  })
+}
+
+function myAsync (fun) {
+  return function (...args) {
+    // 返回 function 对函数包装之后肯定还是函数, 对吧
+    const self = this
+    return new Promise((resolve, reject) => {
+      // 返回 promise, async 返回 promise
+      const gen = fun.apply(self, args)
+      if (!gen || typeof gen.next !== 'function') return resolve(gen)
+
+      next()
+
+      function onReject (e) {
+        try {
+          gen.throw(e)
+          // 参考 co 才发现, 需要关闭生成器, 不然即便报错了, 仍然可以重用
+          // 另外, 这个才是 await 可以被 try catch 捕捉的关键啊, 用来向外部的生成器抛错
+          // 没搞太懂, 这个是怎么抛错的, 看来是收获研究一波 generator 了
+        } catch (error) {
+          reject(e)
+        }
+      }
+
+      function next (value) {
+        let res
+        try {
+          res = gen.next(value)
+        } catch (e) {
+          return onReject(e) // 捕捉 next 报错
+        }
+        return Promise.resolve(res.value) // 兼容 res.value 是 promise 的情况
+          .then(
+            v => {
+              if (res.done) return resolve(v)
+              return next(v) // .then 包装, 和上面的 Promise.resolve 一样, 保证了 promise 状态变更 (就是执行完了)
+            },
+            onReject // 捕捉 value <Promise> 报错
+          )
+      }
+    })
+  }
+}
+
+myAsync(function * () {
+  try {
+    // 此处的 yield 关键字 配合上面的 gen.throw, 可以使 try catch 捕捉到报错
+    // 但是如果使用 myAsync(test)(10).catch(e => {}) 捕捉的话, 那就是生成器关闭了, 什么都没了
+    const result = yield myAsync(test)(10)
+    console.log('result ===> ', result)
+  } catch (e) {
+    console.log('external error ===> ', e)
+  }
+})()
+```
