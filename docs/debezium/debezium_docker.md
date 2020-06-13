@@ -2,7 +2,7 @@
 title: Debezium docker 形式部署
 date: 2020-05-28 15:50:37
 categories: Debezium
-tags: Debezium
+tags: [Debezium]
 ---
 
 ::: tip
